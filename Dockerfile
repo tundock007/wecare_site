@@ -1,6 +1,11 @@
-FROM bitnami/wordpress:latest
+# WeCare Theme - WordPress with Custom Theme
+FROM wordpress:latest
 
-# Copy theme files to Bitnami's WordPress location
-COPY *.php /bitnami/wordpress/wp-content/themes/wecare/
-COPY style.css /bitnami/wordpress/wp-content/themes/wecare/
-COPY assets/ /bitnami/wordpress/wp-content/themes/wecare/assets/
+# Copy custom theme into WordPress themes directory
+COPY wp-content/themes/wecare-theme /var/www/html/wp-content/themes/wecare-theme
+
+# Set proper permissions
+RUN chown -R www-data:www-data /var/www/html/wp-content/themes/wecare-theme
+
+# Expose port 80
+EXPOSE 80

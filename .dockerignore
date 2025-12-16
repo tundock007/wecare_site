@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+vendor/
+
+# WordPress core (pulled from Docker image)
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+# Keep only our custom theme
+!wp-content/themes/wecare-theme/
+
+# Uploads (managed by WordPress)
+wp-content/uploads/
+
+# Other plugins (install via WordPress admin)
+wp-content/plugins/
+
+# Other themes
+wp-content/themes/twenty*/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Backups
+*.sql
+*.zip
+wecare-theme.zip
+wecare.zip
+
+# Old files at root (now in wp-content/themes/wecare-theme)
+/*.php
+/assets/
