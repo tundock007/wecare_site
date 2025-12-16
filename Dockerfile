@@ -1,5 +1,5 @@
 # WeCare Theme - WordPress with Custom Theme
-FROM wordpress:6.4-apache
+FROM wordpress:latest
 
 # Copy custom theme into WordPress themes directory
 COPY wp-content/themes/wecare-theme /var/www/html/wp-content/themes/wecare-theme
