@@ -12,11 +12,12 @@ get_header();
 <section class="hero-section" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <div class="hero-logo">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo-white.png" alt="WeCare Logo">
-        </div>
         <h1 class="hero-title">PCA Services, ARMHS & Housing Stabilization in Minnesota</h1>
-        <p class="hero-subtitle">Welcome to a place where compassionate support meets personalized care. We are proud to serve adults 18+ in the greater St. Cloud area, offering <em>culturally responsive</em> support. Whether you need guidance or just someone to talk to, we're here to help you face life's challenges with empathy and understanding. Join our community and experience the difference that personalized care can make.</p>
+        <p class="hero-subtitle">Welcome to a place where compassionate support meets personalized care. We are proud to serve adults 18+ in the greater St. Cloud area, offering <em>culturally responsive</em> support. Whether you need guidance or just someone to talk to, we're here to help you face life's challenges with empathy and understanding.</p>
+        <div class="hero-buttons">
+            <a href="<?php echo esc_url(home_url('/services')); ?>" class="btn btn-primary">Explore Our Services</a>
+            <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-outline">Get In Touch</a>
+        </div>
     </div>
 </section>
 
