@@ -1,8 +1,5 @@
 # WeCare Theme - WordPress with Custom Theme
-FROM wordpress:latest
-
-# Fix Apache MPM conflict on Railway
-RUN a2dismod mpm_event && a2enmod mpm_prefork
+FROM wordpress:6.4-apache
 
 # Copy custom theme into WordPress themes directory
 COPY wp-content/themes/wecare-theme /var/www/html/wp-content/themes/wecare-theme
