@@ -19,11 +19,16 @@
                 <?php else : ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
                         <span class="logo-icon">
-                            <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M25 5C20 0 10 0 5 5C0 10 0 20 5 25L25 40L45 25C50 20 50 10 45 5C40 0 30 0 25 5Z" fill="#E87722"/>
-                                <circle cx="15" cy="12" r="4" fill="#2E5984"/>
-                                <circle cx="35" cy="12" r="4" fill="#2E5984"/>
-                                <path d="M15 16C15 16 20 28 25 28C30 28 35 16 35 16" stroke="#2E5984" stroke-width="3" fill="none"/>
+                            <!-- WeCare Logo - Two figures with heart -->
+                            <svg width="55" height="45" viewBox="0 0 55 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Left figure -->
+                                <circle cx="15" cy="10" r="5" fill="#3E645D"/>
+                                <path d="M15 16C15 16 8 20 8 28C8 32 10 36 15 38" stroke="#3E645D" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <!-- Right figure -->
+                                <circle cx="40" cy="10" r="5" fill="#3E645D"/>
+                                <path d="M40 16C40 16 47 20 47 28C47 32 45 36 40 38" stroke="#3E645D" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <!-- Heart/connection in middle -->
+                                <path d="M27.5 18C24 14 18 14 15 18C12 22 12 28 15 32L27.5 42L40 32C43 28 43 22 40 18C37 14 31 14 27.5 18Z" fill="#F7941D"/>
                             </svg>
                         </span>
                         <span class="logo-text">

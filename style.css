@@ -12,19 +12,30 @@ Tags: healthcare, care, services, responsive, modern
 */
 
 /* ==========================================================================
-   CSS Variables - WeCare Brand Colors
+   CSS Variables - WeCare Official Brand Colors
    ========================================================================== */
 :root {
-    --primary-color: #2E5984;      /* Navy Blue */
-    --secondary-color: #E87722;    /* Orange */
-    --accent-color: #4A9B7F;       /* Teal/Green */
+    /* Primary Brand Colors */
+    --terracotta: #CE7D4D;         /* PMS 722 C - Warm Brown/Orange */
+    --orange: #F7941D;             /* PMS 1495 C - Bright Orange */
+    --teal: #3E645D;               /* PMS 5545 C - Teal/Dark Green */
+    --forest: #204230;             /* PMS 560 C - Dark Forest Green */
+    
+    /* Semantic Color Mapping */
+    --primary-color: #3E645D;      /* Teal - Main brand color */
+    --secondary-color: #F7941D;    /* Orange - Accent/CTA color */
+    --accent-color: #CE7D4D;       /* Terracotta - Warm accent */
+    --dark-color: #204230;         /* Forest Green - Dark elements */
+    
+    /* Neutral Colors */
     --light-color: #F5F5F5;
-    --dark-color: #1A1A2E;
     --text-color: #333333;
     --text-light: #666666;
     --white: #FFFFFF;
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
+    
+    /* Typography - Museo & Century Gothic */
+    --font-primary: 'Museo', 'Century Gothic', 'Avenir', sans-serif;
+    --font-secondary: 'Century Gothic', 'Avenir', 'Poppins', sans-serif;
 }
 
 /* ==========================================================================
@@ -244,7 +255,7 @@ img {
 }
 
 .btn-staff:hover {
-    background-color: #3d8269;
+    background-color: #b36a3f;  /* Darker terracotta */
 }
 
 .btn-client {
@@ -257,7 +268,7 @@ img {
 }
 
 .btn-client:hover {
-    background-color: #234a6d;
+    background-color: var(--dark-color);  /* Forest green on hover */
 }
 
 /* Mobile Menu Toggle */
