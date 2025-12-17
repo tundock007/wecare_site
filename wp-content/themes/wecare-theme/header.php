@@ -27,18 +27,14 @@
                         <a href="<?php echo esc_url(home_url('/services')); ?>">Our Services</a>
                         <ul class="sub-menu">
                             <li><a href="<?php echo esc_url(home_url('/services/behavioral-health')); ?>">Behavioral Health Services</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/services/housing')); ?>">Housing Stabilization</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/services/housing-stabilization')); ?>">Housing Stabilization Services</a></li>
                             <li><a href="<?php echo esc_url(home_url('/services/adult-day')); ?>">Adult Day Services</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/services/pca-cfss')); ?>">PCA/CFSS Services</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/services/mnsure')); ?>">MNSure Navigation</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a>
-                        <ul class="sub-menu">
-                            <li><a href="<?php echo esc_url(home_url('/about')); ?>">Our Story</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/team')); ?>">Our Team</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a></li>
                     <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact Us</a></li>
                 </ul>
             </nav>
@@ -47,10 +43,11 @@
             <div class="header-actions">
                 <div class="header-info">
                     <span class="phone-number">For more information call: (320) 281-4449</span>
+                    <span class="email-info">info@wecaremn.org</span>
                 </div>
                 <div class="header-buttons">
                     <a href="#" class="btn btn-outline staff-access">Staff Access</a>
-                    <a href="#" class="btn btn-primary client-login">Client Login</a>
+                    <a href="https://app.procentive.com/clientportal2/" class="btn btn-primary client-login">Client Login</a>
                 </div>
             </div>
         </div>

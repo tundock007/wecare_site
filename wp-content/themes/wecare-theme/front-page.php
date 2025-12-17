@@ -13,7 +13,7 @@ get_header();
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 class="hero-title">PCA Services, ARMHS & Housing Stabilization in Minnesota</h1>
-        <p class="hero-subtitle">Welcome to a place where compassionate support meets personalized care. We are proud to serve adults 18+ in the greater St. Cloud area, offering <em>culturally responsive</em> support. Whether you need guidance or just someone to talk to, we're here to help you face life's challenges with empathy and understanding.</p>
+        <p class="hero-subtitle">Welcome to a place where compassionate support meets personalized care. We are proud to serve adults 18+ in the greater St. Cloud area, offering <em>culturally responsive</em> support. Whether you need guidance or just someone to talk to, we're here to help you face life's challenges with empathy and understanding. Join our community and experience the difference that personalized care can make.</p>
         <div class="hero-buttons">
             <a href="<?php echo esc_url(home_url('/services')); ?>" class="btn btn-primary">Explore Our Services</a>
             <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-outline">Get In Touch</a>
@@ -46,38 +46,97 @@ get_header();
             </div>
         </div>
 
-        <!-- Service 2: PCA Services -->
+        <!-- Service 2: Housing Stabilization -->
         <div class="service-row reverse">
             <div class="service-image">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pca-services.jpg" alt="PCA Services">
-            </div>
-            <div class="service-content">
-                <h3 class="service-heading">Personal Care Assistance (PCA)</h3>
-                <p class="service-intro"><strong>Helping individuals maintain independence in their daily lives:</strong></p>
-                
-                <p class="service-focus"><strong>Our PCA services include:</strong></p>
-                <ul class="service-list">
-                    <li>Assistance with daily living activities</li>
-                    <li>Medication reminders and health monitoring</li>
-                    <li>Meal preparation and nutrition support</li>
-                    <li>Transportation to appointments</li>
-                </ul>
-                <a href="<?php echo esc_url(home_url('/services/pca')); ?>" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
-
-        <!-- Service 3: Housing Stabilization -->
-        <div class="service-row">
-            <div class="service-image">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/housing.jpg" alt="Housing Stabilization">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/housing.jpg" alt="Housing Stabilization Services">
             </div>
             <div class="service-content">
                 <h3 class="service-heading">Housing Stabilization Services</h3>
-                <p class="service-intro"><strong>Supporting individuals in finding and maintaining stable housing:</strong></p>
-                
-                <p class="service-focus"><strong>We provide assistance with:</strong></p>
+                <div class="important-notice">
+                    <strong>IMPORTANT NOTICE:</strong> Due to DHS ending all Housing Stabilization Programs effective October 31st, we will no longer be able to offer these services. We understand this change may cause disruption, and we apologize for any inconvenience. Please don't hesitate to call—we're here to help you navigate this change.
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Adult Day Services -->
+        <div class="service-row">
+            <div class="service-image">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/adult-day-services.jpg" alt="Adult Day Services">
+            </div>
+            <div class="service-content">
+                <h3 class="service-heading">Adult Day Services & Outpatient Therapy Services</h3>
+                <p class="service-intro"><strong>Enabling people to live independently and stay connected to their community by:</strong></p>
                 <ul class="service-list">
-                    <li>Housing search and application support</li>
+                    <li>Adult Day Services</li>
+                    <li>Outpatient Therapy</li>
+                    <li>Promoting dignity, connection, and peace of mind for families</li>
+                </ul>
+                
+                <p class="service-focus"><strong>Focus on:</strong></p>
+                <ul class="service-list">
+                    <li>Social enrichment and meaningful activities</li>
+                    <li>Personalized therapy sessions</li>
+                    <li>Enhancing well-being and independence</li>
+                </ul>
+                <a href="<?php echo esc_url(home_url('/services/adult-day')); ?>" class="btn btn-primary">Adult Day Services</a>
+            </div>
+        </div>
+
+        <!-- Service 4: PCA/CFSS Services -->
+        <div class="service-row reverse">
+            <div class="service-image">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pca-services.jpg" alt="PCA/CFSS Services">
+            </div>
+            <div class="service-content">
+                <h3 class="service-heading">PCA/CFSS Services</h3>
+                <p class="service-intro"><strong>Supporting adults and seniors with disabilities, chronic illnesses, or mental health or behavioral challenges</strong></p>
+                
+                <p class="service-focus"><strong>We offer:</strong></p>
+                <ul class="service-list">
+                    <li>In-home and community-based care</li>
+                    <li>Care plans tailored to individual needs</li>
+                    <li>Compassionate support from staff</li>
+                </ul>
+
+                <p class="service-focus"><strong>Help with tasks like:</strong></p>
+                <ul class="service-list">
+                    <li>Bathing, dressing, and mobility</li>
+                    <li>Meal preparation and medication reminders</li>
+                </ul>
+                <a href="<?php echo esc_url(home_url('/pca-cfss-services')); ?>" class="btn btn-primary">Personal Care Assistance (PCA)</a>
+            </div>
+        </div>
+
+        <!-- Service 5: MNSure Navigation -->
+        <div class="service-row">
+            <div class="service-image">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/mnsure.jpg" alt="MNSure Navigation">
+            </div>
+            <div class="service-content">
+                <h3 class="service-heading">MNSure Navigation</h3>
+                <p class="service-intro"><strong>Free, in-person help with applying for and enrolling in health insurance:</strong></p>
+                <ul class="service-list">
+                    <li>Certified navigators to guide individuals and families</li>
+                    <li>Empowering informed decisions about healthcare</li>
+                </ul>
+                
+                <p class="service-focus"><strong>Help with applications for:</strong></p>
+                <ul class="service-list">
+                    <li>Medical assistance</li>
+                    <li>MinnesotaCare</li>
+                    <li>Qualified health plans</li>
+                </ul>
+                
+                <p class="service-focus"><strong>Step-by-step assistance with:</strong></p>
+                <ul class="service-list">
+                    <li>Gathering documents</li>
+                    <li>Completing applications</li>
+                    <li>Understanding coverage options</li>
+                </ul>
+                <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>" class="btn btn-primary">MNSure Navigation</a>
+            </div>
+        </div>
                     <li>Tenant education and advocacy</li>
                     <li>Budget management and financial planning</li>
                     <li>Connection to community resources</li>
