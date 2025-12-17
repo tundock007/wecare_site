@@ -42,7 +42,7 @@ get_header();
                     <li>Skill-building in emotional management and daily tasks</li>
                     <li>Fostering connections and shared growth</li>
                 </ul>
-                <a href="<?php echo esc_url(home_url('/services/behavioral-health')); ?>" class="btn btn-primary">Learn More</a>
+                <a href="<?php echo esc_url(home_url('/services#behavioral-health')); ?>" class="btn btn-primary">Learn More</a>
             </div>
         </div>
 
@@ -79,7 +79,7 @@ get_header();
                     <li>Personalized therapy sessions</li>
                     <li>Enhancing well-being and independence</li>
                 </ul>
-                <a href="<?php echo esc_url(home_url('/services/adult-day')); ?>" class="btn btn-primary">Adult Day Services</a>
+                <a href="<?php echo esc_url(home_url('/adult-day')); ?>" class="btn btn-primary">Adult Day Services</a>
             </div>
         </div>
 
@@ -104,7 +104,7 @@ get_header();
                     <li>Bathing, dressing, and mobility</li>
                     <li>Meal preparation and medication reminders</li>
                 </ul>
-                <a href="<?php echo esc_url(home_url('/pca-cfss-services')); ?>" class="btn btn-primary">Personal Care Assistance (PCA)</a>
+                <a href="<?php echo esc_url(home_url('/pca-cfss')); ?>" class="btn btn-primary">Personal Care Assistance (PCA)</a>
             </div>
         </div>
 
@@ -141,7 +141,7 @@ get_header();
                     <li>Budget management and financial planning</li>
                     <li>Connection to community resources</li>
                 </ul>
-                <a href="<?php echo esc_url(home_url('/services/housing')); ?>" class="btn btn-primary">Learn More</a>
+                <a href="<?php echo esc_url(home_url('/services#housing')); ?>" class="btn btn-primary">Learn More</a>
             </div>
         </div>
     </div>
