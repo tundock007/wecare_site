@@ -15,7 +15,7 @@
             <!-- Logo -->
             <div class="site-branding">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/WeCare Horizontal Logo Full Color-01.png" alt="WeCare Logo" class="logo-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Logo" class="logo-image">
                 </a>
             </div>
 
