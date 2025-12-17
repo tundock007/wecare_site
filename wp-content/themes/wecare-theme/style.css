@@ -1280,9 +1280,9 @@ img {
 
 /* Logo Image Styles */
 .logo-image {
-    height: 35px;
+    height: 42px;
     width: auto;
-    max-width: 150px;
+    max-width: 175px;
 }
 
 /* Override existing logo styles */
