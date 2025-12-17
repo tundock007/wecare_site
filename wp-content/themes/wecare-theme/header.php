@@ -15,25 +15,7 @@
             <!-- Logo -->
             <div class="site-branding">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-                    <div class="logo-icon">
-                        <!-- WeCare Logo - Heart with figures -->
-                        <svg width="55" height="45" viewBox="0 0 55 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Heart shape -->
-                            <path d="M27.5 42C27.5 42 45 28 45 18C45 10 38 5 30 10C28 8 25 8 22 10C14 5 7 10 7 18C7 28 27.5 42 27.5 42Z" fill="#F7941D"/>
-                            <!-- Left figure -->
-                            <circle cx="18" cy="15" r="3" fill="#3E645D"/>
-                            <path d="M18 19L18 30" stroke="#3E645D" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M15 24L21 24" stroke="#3E645D" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Right figure -->
-                            <circle cx="37" cy="15" r="3" fill="#3E645D"/>
-                            <path d="M37 19L37 30" stroke="#3E645D" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M34 24L40 24" stroke="#3E645D" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <h1 class="site-title">WeCare</h1>
-                        <p class="site-tagline">Integrated Care, Mindful Wellbeing</p>
-                    </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/WeCare Horizontal Logo Full Color-01.png" alt="WeCare Logo" class="logo-image">
                 </a>
             </div>
 

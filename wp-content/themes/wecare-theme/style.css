@@ -1277,3 +1277,18 @@ img {
         flex-direction: column;
     }
 }
+
+/* Logo Image Styles */
+.logo-image {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+}
+
+/* Override existing logo styles */
+.site-branding .site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
