@@ -1,13 +1,12 @@
 #!/bin/bash
 set -e
 
-# Copy theme from build location to volume if it doesn't exist
-if [ ! -d "/var/www/html/wp-content/themes/wecare-theme" ]; then
-    echo "Installing WeCare theme..."
-    cp -r /tmp/wecare-theme /var/www/html/wp-content/themes/
-    chown -R www-data:www-data /var/www/html/wp-content/themes/wecare-theme
-    echo "WeCare theme installed!"
-fi
+# Always copy theme from build location to ensure updates
+echo "Installing/Updating WeCare theme..."
+rm -rf /var/www/html/wp-content/themes/wecare-theme
+cp -r /tmp/wecare-theme /var/www/html/wp-content/themes/
+chown -R www-data:www-data /var/www/html/wp-content/themes/wecare-theme
+echo "WeCare theme installed/updated!"
 
 # Fix Apache MPM conflict
 echo "Fixing Apache MPM configuration..."
