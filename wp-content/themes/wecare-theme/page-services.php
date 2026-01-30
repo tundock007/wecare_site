@@ -33,6 +33,10 @@ get_header();
                     <h2 class="service-heading">Behavioral Health Services</h2>
                     <p>We support mental wellness to help individuals lead complete and independent lives through Adult Rehabilitative Mental Health Services (ARMHS) and Outpatient Therapy.</p>
                     
+                    <div class="service-areas-badge">
+                        <strong>Service Areas:</strong> Central Minnesota (St. Cloud area), Metro/Twin Cities, and surrounding communities
+                    </div>
+
                     <h4>Adult Rehabilitative Mental Health Services (ARMHS)</h4>
                     <p>ARMHS provides community-based mental health services for adults with serious mental illness. Our services include:</p>
                     <ul class="service-list">

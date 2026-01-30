@@ -21,6 +21,10 @@ get_header();
         <div class="container">
             <div class="overview-content-full">
                 <h2>Our Therapy Services</h2>
+                <div class="service-areas-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span><strong>Service Areas:</strong> Central Minnesota (St. Cloud area), Metro/Twin Cities, and surrounding communities</span>
+                </div>
                 <p>WeCare provides comprehensive psychotherapy services delivered by experienced mental health counselors and practitioners. We create a supportive environment for clients to express emotions and address mental health challenges.</p>
                 <p>Our clinicians support individuals, couples, families, and groups through challenges such as anxiety, depression, trauma, relationship stress, and life transitions.</p>
             </div>
@@ -110,6 +114,27 @@ get_header();
 </main>
 
 <style>
+.service-areas-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-green);
+}
+
+.service-areas-badge svg {
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+
+.service-areas-badge span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
 .overview-content-full {
     max-width: 800px;
 }

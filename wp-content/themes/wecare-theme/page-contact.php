@@ -63,7 +63,7 @@ get_header();
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FBBC04" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         </span>
                         <span class="rating-text">4.6</span>
-                        <a href="https://g.co/kgs/uHjl0JVvIQzaxsReB" target="_blank" rel="noopener noreferrer" class="review-count">23 reviews</a>
+                        <a href="https://www.google.com/maps/search/WeCare+136+Division+St+Waite+Park+MN" target="_blank" rel="noopener noreferrer" class="review-count">23 reviews</a>
                     </div>
                     <a href="https://www.google.com/maps/dir//WeCare,+136+Division+St,+Waite+Park,+MN+56387" target="_blank" rel="noopener noreferrer" class="directions-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>

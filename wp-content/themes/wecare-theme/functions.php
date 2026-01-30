@@ -170,17 +170,19 @@ add_filter('wp_nav_menu_objects', 'wecare_add_menu_parent_class');
 // Add meta description
 function wecare_meta_description() {
     if (is_front_page()) {
-        $description = 'WeCare provides compassionate mental health services, CFSS personal care, and adult day services in the greater St. Cloud, Minnesota area. Culturally responsive care.';
+        $description = 'WeCare provides compassionate mental health services in Central Minnesota and the Metro/Twin Cities, plus CFSS personal care and adult day services. Culturally responsive care.';
     } elseif (is_page('about')) {
         $description = 'Learn about WeCare - our mission, values, and dedicated team providing mental health and personal care services in Central Minnesota.';
     } elseif (is_page('services')) {
-        $description = 'WeCare offers ARMHS, outpatient therapy, CFSS services, adult day programs, and MNsure navigation in St. Cloud, MN. Medical Assistance accepted.';
+        $description = 'WeCare offers ARMHS and outpatient therapy in Central MN and Metro/Twin Cities, plus CFSS, adult day programs, and MNsure navigation. Medical Assistance accepted.';
     } elseif (is_page('behavioral-health')) {
-        $description = 'Adult Rehabilitative Mental Health Services (ARMHS) and outpatient therapy in St. Cloud, MN. Personalized mental health support for adults 18+.';
+        $description = 'Adult Rehabilitative Mental Health Services (ARMHS) and outpatient therapy in Central Minnesota and Metro/Twin Cities. Personalized mental health support for adults 18+.';
     } elseif (is_page('adult-day')) {
         $description = 'Adult Day Services in St. Cloud, MN. Structured daytime program with activities, meals, health monitoring, and respite for families.';
     } elseif (is_page('cfss') || is_page('pca')) {
         $description = 'CFSS (Community First Services and Supports) in Central Minnesota. In-home help with daily living activities. Medical Assistance accepted.';
+    } elseif (is_page('outpatient-therapy')) {
+        $description = 'Outpatient mental health therapy in Central Minnesota and Metro/Twin Cities. Individual, couples, family, and group therapy for anxiety, depression, trauma, and more.';
     } elseif (is_page('referrals')) {
         $description = 'Make a referral to WeCare for mental health services, CFSS, or adult day programs in St. Cloud, MN. Healthcare providers and families welcome.';
     } elseif (is_page('contact')) {
