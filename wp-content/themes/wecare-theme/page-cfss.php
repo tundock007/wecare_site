@@ -112,6 +112,16 @@ get_header();
                     <p>The recipient must be able to make decisions about their care or have a responsible party living with them who can make the decisions.</p>
                 </div>
             </div>
+
+            <div class="external-resources">
+                <h3>Learn More About CFSS</h3>
+                <p>For official information about Community First Services and Supports, visit these trusted resources:</p>
+                <ul class="resource-links">
+                    <li><a href="https://mn.gov/dhs/people-we-serve/people-with-disabilities/services/home-community/programs-and-services/cfss.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - CFSS Program Information</a></li>
+                    <li><a href="https://mn.gov/dhs/people-we-serve/people-with-disabilities/services/home-community/programs-and-services/pca.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - Personal Care Assistance</a></li>
+                    <li><a href="https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=id_000094" target="_blank" rel="noopener noreferrer">Minnesota DHS - Medical Assistance Eligibility</a></li>
+                </ul>
+            </div>
         </div>
     </section>
 

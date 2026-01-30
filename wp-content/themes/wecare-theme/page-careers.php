@@ -22,7 +22,7 @@ get_header();
             <div class="intro-content">
                 <h2>Work With Us</h2>
                 <p>At WeCare, we're always looking for compassionate, dedicated individuals to join our team. We offer rewarding careers in healthcare and community services, competitive benefits, and the opportunity to make a real difference in people's lives.</p>
-                <p>We seek staff for multiple service areas including ARMHS, PCA/CFSS Services, Adult Day Services, and Outpatient Therapy.</p>
+                <p>We seek staff for multiple service areas including ARMHS, CFSS Services, Adult Day Services, and Outpatient Therapy.</p>
             </div>
         </div>
     </section>
@@ -35,11 +35,11 @@ get_header();
             <div class="openings-list">
                 <div class="opening-card">
                     <div class="opening-info">
-                        <h3>PCA/CFSS</h3>
+                        <h3>CFSS</h3>
                         <p class="location">St. Cloud Area, MN</p>
                         <p>Provide personal care and community-based support services to clients in their homes. Help individuals maintain independence and quality of life.</p>
                     </div>
-                    <a href="mailto:kathryn.mandery@wecaremn.org?subject=PCA/CFSS Position Application" class="btn btn-primary">Apply Now</a>
+                    <a href="mailto:kathryn.mandery@wecaremn.org?subject=CFSS Position Application" class="btn btn-primary">Apply Now</a>
                 </div>
 
                 <div class="opening-card">

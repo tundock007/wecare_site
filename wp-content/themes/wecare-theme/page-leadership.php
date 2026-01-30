@@ -24,6 +24,50 @@ get_header();
             </div>
 
             <div class="team-grid">
+                <!-- Ola - CEO -->
+                <div class="team-member">
+                    <div class="member-photo placeholder">
+                        <span>Coming Soon</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ola</h3>
+                        <p class="member-title">Chief Executive Officer</p>
+                    </div>
+                </div>
+
+                <!-- Anna Stefanelli -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-anna.jpg" alt="Anna Stefanelli">
+                    </div>
+                    <div class="member-info">
+                        <h3>Anna Stefanelli</h3>
+                        <p class="member-title">Quality Assurance Manager</p>
+                    </div>
+                </div>
+
+                <!-- Deb Hesli -->
+                <div class="team-member">
+                    <div class="member-photo placeholder">
+                        <span>Coming Soon</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Deb Hesli</h3>
+                        <p class="member-title">Clinical Supervisor</p>
+                    </div>
+                </div>
+
+                <!-- Naima Hussein -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-naima.jpg" alt="Naima Hussein">
+                    </div>
+                    <div class="member-info">
+                        <h3>Naima Hussein</h3>
+                        <p class="member-title">Clinical Trainee</p>
+                    </div>
+                </div>
+
                 <!-- Kathy Mandery -->
                 <div class="team-member">
                     <div class="member-photo">
@@ -46,17 +90,6 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Anna Stefanelli -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-anna.jpg" alt="Anna Stefanelli">
-                    </div>
-                    <div class="member-info">
-                        <h3>Anna Stefanelli</h3>
-                        <p class="member-title">Quality Assurance Manager</p>
-                    </div>
-                </div>
-
                 <!-- Amanda Sand -->
                 <div class="team-member">
                     <div class="member-photo placeholder">
@@ -68,17 +101,6 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Deb Hesli -->
-                <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
-                    </div>
-                    <div class="member-info">
-                        <h3>Deb Hesli</h3>
-                        <p class="member-title">Clinical Supervisor</p>
-                    </div>
-                </div>
-
                 <!-- Donnyel Panek -->
                 <div class="team-member">
                     <div class="member-photo placeholder">
@@ -87,17 +109,6 @@ get_header();
                     <div class="member-info">
                         <h3>Donnyel Panek</h3>
                         <p class="member-title">ARMHS Supervisor - Metro MN</p>
-                    </div>
-                </div>
-
-                <!-- Naima Hussein -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-naima.jpg" alt="Naima Hussein">
-                    </div>
-                    <div class="member-info">
-                        <h3>Naima Hussein</h3>
-                        <p class="member-title">Clinical Trainee</p>
                     </div>
                 </div>
             </div>

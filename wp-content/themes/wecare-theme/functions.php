@@ -162,3 +162,173 @@ function wecare_add_menu_parent_class($items) {
     return $items;
 }
 add_filter('wp_nav_menu_objects', 'wecare_add_menu_parent_class');
+
+/**
+ * SEO Enhancements
+ */
+
+// Add meta description
+function wecare_meta_description() {
+    if (is_front_page()) {
+        $description = 'WeCare provides compassionate mental health services, CFSS personal care, and adult day services in the greater St. Cloud, Minnesota area. Culturally responsive care.';
+    } elseif (is_page('about')) {
+        $description = 'Learn about WeCare - our mission, values, and dedicated team providing mental health and personal care services in Central Minnesota.';
+    } elseif (is_page('services')) {
+        $description = 'WeCare offers ARMHS, outpatient therapy, CFSS services, adult day programs, and MNsure navigation in St. Cloud, MN. Medical Assistance accepted.';
+    } elseif (is_page('behavioral-health')) {
+        $description = 'Adult Rehabilitative Mental Health Services (ARMHS) and outpatient therapy in St. Cloud, MN. Personalized mental health support for adults 18+.';
+    } elseif (is_page('adult-day')) {
+        $description = 'Adult Day Services in St. Cloud, MN. Structured daytime program with activities, meals, health monitoring, and respite for families.';
+    } elseif (is_page('cfss') || is_page('pca')) {
+        $description = 'CFSS (Community First Services and Supports) in Central Minnesota. In-home help with daily living activities. Medical Assistance accepted.';
+    } elseif (is_page('referrals')) {
+        $description = 'Make a referral to WeCare for mental health services, CFSS, or adult day programs in St. Cloud, MN. Healthcare providers and families welcome.';
+    } elseif (is_page('contact')) {
+        $description = 'Contact WeCare in St. Cloud, Minnesota. Call (320) 281-4449 for mental health services, CFSS, and adult day programs.';
+    } elseif (is_page('careers')) {
+        $description = 'Join the WeCare team in St. Cloud, MN. Career opportunities in mental health, CFSS services, and adult day programs.';
+    } else {
+        $description = 'WeCare - Mental health services, personal care assistance, and adult day programs in St. Cloud, Minnesota.';
+    }
+    echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+}
+add_action('wp_head', 'wecare_meta_description', 1);
+
+// Add Open Graph tags for social sharing
+function wecare_open_graph_tags() {
+    $og_title = wp_get_document_title();
+    $og_url = get_permalink();
+    $og_image = get_template_directory_uri() . '/assets/images/wecare-og-image.jpg';
+
+    if (is_front_page()) {
+        $og_description = 'Compassionate mental health services and personal care assistance in St. Cloud, Minnesota.';
+        $og_url = home_url('/');
+    } else {
+        $og_description = get_the_excerpt() ?: 'WeCare - Mental health and personal care services in Central Minnesota.';
+    }
+    ?>
+    <meta property="og:title" content="<?php echo esc_attr($og_title); ?>">
+    <meta property="og:description" content="<?php echo esc_attr($og_description); ?>">
+    <meta property="og:url" content="<?php echo esc_url($og_url); ?>">
+    <meta property="og:image" content="<?php echo esc_url($og_image); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WeCare">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <?php
+}
+add_action('wp_head', 'wecare_open_graph_tags', 2);
+
+// Add Local Business Schema (JSON-LD)
+function wecare_local_business_schema() {
+    if (!is_front_page() && !is_page('contact')) return;
+    ?>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "WeCare",
+        "description": "Mental health services, personal care assistance, and adult day programs in St. Cloud, Minnesota",
+        "url": "<?php echo home_url('/'); ?>",
+        "telephone": "+1-320-281-4449",
+        "email": "info@wecaremn.org",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "136 Division Street",
+            "addressLocality": "Waite Park",
+            "addressRegion": "MN",
+            "postalCode": "56387",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            {"@type": "City", "name": "St. Cloud"},
+            {"@type": "City", "name": "Waite Park"},
+            {"@type": "City", "name": "Minneapolis"},
+            {"@type": "City", "name": "St. Paul"},
+            {"@type": "County", "name": "Stearns County"},
+            {"@type": "County", "name": "Benton County"},
+            {"@type": "County", "name": "Sherburne County"},
+            {"@type": "County", "name": "Wright County"},
+            {"@type": "County", "name": "Hennepin County"},
+            {"@type": "County", "name": "Ramsey County"}
+        ],
+        "medicalSpecialty": [
+            "Mental Health",
+            "Psychiatric",
+            "Rehabilitation"
+        ],
+        "availableService": [
+            {
+                "@type": "MedicalTherapy",
+                "name": "Adult Rehabilitative Mental Health Services (ARMHS)"
+            },
+            {
+                "@type": "MedicalTherapy",
+                "name": "Outpatient Therapy"
+            },
+            {
+                "@type": "Service",
+                "name": "CFSS (Community First Services and Supports)"
+            },
+            {
+                "@type": "Service",
+                "name": "Adult Day Services"
+            }
+        ],
+        "openingHours": "Mo-Fr 08:00-17:00",
+        "priceRange": "Accepts Medical Assistance"
+    }
+    </script>
+    <?php
+}
+add_action('wp_head', 'wecare_local_business_schema', 3);
+
+// Add canonical URL
+function wecare_canonical_url() {
+    if (is_front_page()) {
+        $canonical = home_url('/');
+    } else {
+        $canonical = get_permalink();
+    }
+    echo '<link rel="canonical" href="' . esc_url($canonical) . '">' . "\n";
+}
+add_action('wp_head', 'wecare_canonical_url', 4);
+
+/**
+ * Auto-create required pages on theme activation
+ */
+function wecare_create_required_pages() {
+    $pages = array(
+        'privacy' => array(
+            'title' => 'Data Privacy Notice',
+            'template' => 'page-privacy.php'
+        ),
+        'non-discrimination' => array(
+            'title' => 'Non-Discrimination Notice',
+            'template' => 'page-non-discrimination.php'
+        )
+    );
+
+    foreach ($pages as $slug => $page_data) {
+        // Check if page exists
+        $existing_page = get_page_by_path($slug);
+
+        if (!$existing_page) {
+            // Create the page
+            $page_id = wp_insert_post(array(
+                'post_title'     => $page_data['title'],
+                'post_name'      => $slug,
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'post_content'   => '',
+                'comment_status' => 'closed'
+            ));
+
+            // Set page template
+            if ($page_id && !is_wp_error($page_id)) {
+                update_post_meta($page_id, '_wp_page_template', $page_data['template']);
+            }
+        }
+    }
+}
+add_action('init', 'wecare_create_required_pages');

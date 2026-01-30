@@ -32,7 +32,7 @@ get_header();
             <div class="overview-grid">
                 <div class="overview-content">
                     <h2>Who We Are</h2>
-                    <p>WeCare is a social services provider based in St. Cloud, Minnesota, offering remote services in Winona and Alexandria. We serve individuals aged 18 and older with comprehensive support focused on holistic care.</p>
+                    <p>WeCare is a social services provider based in Waite Park, Minnesota. We provide Behavioral Health services throughout Central Minnesota, the Metro/Twin Cities area, and surrounding communities. We serve individuals aged 18 and older with comprehensive support focused on holistic care.</p>
                     <p>Our team of dedicated professionals is committed to helping you face life's challenges with empathy and understanding. Whether you need support with mental health, daily living activities, or finding stable housing, we're here to walk alongside you every step of the way.</p>
                 </div>
                 <div class="overview-info">

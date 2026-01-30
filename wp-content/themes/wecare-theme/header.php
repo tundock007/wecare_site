@@ -49,13 +49,12 @@
 
             <!-- Header Actions -->
             <div class="header-actions">
-                <div class="header-info">
-                    <span class="phone-number">For more information call: (320) 281-4449</span>
-                    <span class="email-info">info@wecaremn.org</span>
-                </div>
                 <div class="header-buttons">
-                    <a href="#" class="btn btn-outline staff-access">Staff Access</a>
-                    <a href="https://app.procentive.com/clientportal2/" class="btn btn-primary client-login">Client Login</a>
+                    <a href="#" class="staff-access">Staff Access</a>
+                    <a href="https://app.procentive.com/clientportal2/" class="client-login">Client Login</a>
+                </div>
+                <div class="header-info">
+                    <span class="phone-number">For more information call: <a href="tel:3202814449">(320) 281-4449</a></span>
                 </div>
             </div>
         </div>

@@ -52,7 +52,7 @@ get_header();
                         </div>
                         <div class="contact-text">
                             <h4>Location</h4>
-                            <p>St. Cloud, Minnesota</p>
+                            <p>136 Division Street<br>Waite Park, MN 56387</p>
                         </div>
                     </div>
                     

@@ -29,7 +29,8 @@
 
                 <div class="footer-section footer-contact">
                     <h4><?php esc_html_e('Contact Info', 'wecare'); ?></h4>
-                    <p><?php esc_html_e('St. Cloud, Minnesota', 'wecare'); ?></p>
+                    <p><?php esc_html_e('136 Division Street', 'wecare'); ?><br>
+                    <?php esc_html_e('Waite Park, MN 56387', 'wecare'); ?></p>
                     <div class="footer-contact-info">
                         <a href="tel:3202814449">📞 (320) 281-4449</a>
                         <a href="mailto:info@wecaremn.com">✉️ info@wecaremn.com</a>
@@ -37,8 +38,14 @@
                 </div>
             </div>
 
+            <div class="footer-bottom-links">
+                <a href="<?php echo esc_url(home_url('/privacy')); ?>"><?php esc_html_e('Data Privacy Notice', 'wecare'); ?></a>
+                <span class="separator">|</span>
+                <a href="<?php echo esc_url(home_url('/non-discrimination')); ?>"><?php esc_html_e('Non-Discrimination Notice', 'wecare'); ?></a>
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> WeCare Integrated Care. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> WeCare. All rights reserved.</p>
             </div>
         </div>
     </footer>

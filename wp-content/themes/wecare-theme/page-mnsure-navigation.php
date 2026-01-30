@@ -88,6 +88,17 @@ get_header();
                 <li><strong>Community Connection:</strong> We are deeply rooted in the communities we serve and continuously work to make healthcare access more inclusive and equitable.</li>
             </ul>
         </div>
+
+        <div class="external-resources">
+            <h3>Official MNsure Resources</h3>
+            <p>For more information about health coverage options in Minnesota:</p>
+            <ul class="resource-links">
+                <li><a href="https://www.mnsure.org/" target="_blank" rel="noopener noreferrer">MNsure - Minnesota's Health Insurance Marketplace</a></li>
+                <li><a href="https://mn.gov/dhs/people-we-serve/adults/health-care/health-care-programs/programs-and-services/medical-assistance.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - Medical Assistance</a></li>
+                <li><a href="https://mn.gov/dhs/people-we-serve/adults/health-care/health-care-programs/programs-and-services/minnesotacare.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - MinnesotaCare</a></li>
+                <li><a href="https://www.healthcare.gov/" target="_blank" rel="noopener noreferrer">HealthCare.gov - Federal Health Insurance Information</a></li>
+            </ul>
+        </div>
     </div>
 </section>
 

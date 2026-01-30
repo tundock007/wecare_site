@@ -27,6 +27,10 @@ get_header();
                 <div class="service-content">
                     <h2 class="service-heading">Behavioral Health Services</h2>
                     <p>We support mental wellness to help individuals lead complete and independent lives through Adult Rehabilitative Mental Health Services (ARMHS) and Outpatient Therapy.</p>
+
+                    <div class="service-areas">
+                        <strong>Service Areas:</strong> Central Minnesota (St. Cloud area), Metro/Twin Cities, and surrounding communities
+                    </div>
                     
                     <h3>Adult Rehabilitative Mental Health Services (ARMHS)</h3>
                     <p>ARMHS provides community-based mental health services for adults with serious mental illness. Our services include:</p>
@@ -48,6 +52,18 @@ get_header();
                         <li>Life transitions and adjustments</li>
                         <li>Stress management</li>
                     </ul>
+
+                    <div class="external-resources">
+                        <h3>Mental Health Resources</h3>
+                        <p>For more information about mental health services in Minnesota:</p>
+                        <ul class="resource-links">
+                            <li><a href="https://mn.gov/dhs/people-we-serve/adults/health-care/mental-health/programs-services/adult-mental-health.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - Adult Mental Health Services</a></li>
+                            <li><a href="https://mn.gov/dhs/people-we-serve/adults/health-care/mental-health/programs-services/armhs.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - ARMHS Information</a></li>
+                            <li><a href="https://www.nami.org/Home" target="_blank" rel="noopener noreferrer">NAMI - National Alliance on Mental Illness</a></li>
+                            <li><a href="https://namimn.org/" target="_blank" rel="noopener noreferrer">NAMI Minnesota</a></li>
+                            <li><a href="https://988lifeline.org/" target="_blank" rel="noopener noreferrer">988 Suicide & Crisis Lifeline</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
