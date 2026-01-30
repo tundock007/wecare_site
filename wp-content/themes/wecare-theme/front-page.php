@@ -12,7 +12,7 @@ get_header();
 <section class="hero-section" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="hero-title">PCA Services, ARMHS & Housing Stabilization in Minnesota</h1>
+        <h1 class="hero-title">Mental Health & Personal Care Services in Minnesota</h1>
         <p class="hero-subtitle">Welcome to a place where compassionate support meets personalized care. We are proud to serve adults 18+ in the greater St. Cloud area, offering <em>culturally responsive</em> support. Whether you need guidance or just someone to talk to, we're here to help you face life's challenges with empathy and understanding. Join our community and experience the difference that personalized care can make.</p>
         <div class="hero-buttons">
             <a href="<?php echo esc_url(home_url('/services')); ?>" class="btn btn-primary">Explore Our Services</a>
@@ -46,18 +46,6 @@ get_header();
             </div>
         </div>
 
-        <!-- Service 2: Housing Stabilization -->
-        <div class="service-row reverse">
-            <div class="service-image">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/housing.jpg" alt="Housing Stabilization Services">
-            </div>
-            <div class="service-content">
-                <h3 class="service-heading">Housing Stabilization Services</h3>
-                <div class="important-notice">
-                    <strong>IMPORTANT NOTICE:</strong> Due to DHS ending all Housing Stabilization Programs effective October 31st, we will no longer be able to offer these services. We understand this change may cause disruption, and we apologize for any inconvenience. Please don't hesitate to call—we're here to help you navigate this change.
-                </div>
-            </div>
-        </div>
 
         <!-- Service 3: Adult Day Services -->
         <div class="service-row">
@@ -135,13 +123,6 @@ get_header();
                     <li>Understanding coverage options</li>
                 </ul>
                 <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>" class="btn btn-primary">MNSure Navigation</a>
-            </div>
-        </div>
-                    <li>Tenant education and advocacy</li>
-                    <li>Budget management and financial planning</li>
-                    <li>Connection to community resources</li>
-                </ul>
-                <a href="<?php echo esc_url(home_url('/housing')); ?>" class="btn btn-primary">Learn More</a>
             </div>
         </div>
     </div>

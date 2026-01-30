@@ -43,14 +43,6 @@ get_header();
                     </ul>
                     <p><strong>Eligibility:</strong> Medical Assistance enrolled individuals with assessed needs</p>
                 </div>
-                <div class="referral-card">
-                    <h4>Housing Stabilization Services</h4>
-                    <ul>
-                        <li>Housing Transition</li>
-                        <li>Housing Sustaining</li>
-                    </ul>
-                    <p><strong>Eligibility:</strong> MA enrolled individuals experiencing housing instability</p>
-                </div>
             </div>
         </div>
     </div>
@@ -132,8 +124,8 @@ get_header();
                         <div class="checkbox-group">
                             <label><input type="checkbox" name="services[]" value="armhs"> ARMHS</label>
                             <label><input type="checkbox" name="services[]" value="therapy"> Outpatient Therapy</label>
-                            <label><input type="checkbox" name="services[]" value="pca"> Personal Care Assistance</label>
-                            <label><input type="checkbox" name="services[]" value="housing"> Housing Stabilization</label>
+                            <label><input type="checkbox" name="services[]" value="pca"> Personal Care Assistance (CFSS)</label>
+                            <label><input type="checkbox" name="services[]" value="mnsure"> MNSure Navigation</label>
                         </div>
                     </div>
                     <div class="form-group">

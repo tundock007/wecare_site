@@ -9,10 +9,11 @@
                 <div class="footer-section footer-services">
                     <h4><?php esc_html_e('Our Services', 'wecare'); ?></h4>
                     <ul>
-                        <li><a href="<?php echo esc_url(home_url('/services/behavioral-health')); ?>"><?php esc_html_e('Behavioral Health (ARMHS)', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/services/pca')); ?>"><?php esc_html_e('Personal Care Assistance', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/services/housing')); ?>"><?php esc_html_e('Housing Stabilization', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/services/outpatient-therapy')); ?>"><?php esc_html_e('Outpatient Therapy', 'wecare'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/behavioral-health')); ?>"><?php esc_html_e('ARMHS', 'wecare'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/adult-day')); ?>"><?php esc_html_e('Adult Day Services', 'wecare'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/outpatient-therapy')); ?>"><?php esc_html_e('Outpatient Therapy', 'wecare'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/cfss')); ?>"><?php esc_html_e('CFSS', 'wecare'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>"><?php esc_html_e('MNSure Navigator', 'wecare'); ?></a></li>
                     </ul>
                 </div>
 

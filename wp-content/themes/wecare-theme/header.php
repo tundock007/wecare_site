@@ -26,15 +26,23 @@
                     <li class="menu-item-has-children">
                         <a href="<?php echo esc_url(home_url('/services')); ?>">Our Services</a>
                         <ul class="sub-menu">
-                            <li><a href="<?php echo esc_url(home_url('/services/behavioral-health')); ?>">Behavioral Health Services</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/services/housing-stabilization')); ?>">Housing Stabilization Services</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/services/adult-day')); ?>">Adult Day Services</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/services/pca-cfss')); ?>">PCA/CFSS Services</a></li>
-                            <li><a href="<?php echo esc_url(home_url('/services/mnsure')); ?>">MNSure Navigation</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/behavioral-health')); ?>">ARMHS</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/adult-day')); ?>">Adult Day Services</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/outpatient-therapy')); ?>">Outpatient Therapy</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/cfss')); ?>">CFSS</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>">MNSure Navigator</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a>
+                        <ul class="sub-menu">
+                            <li><a href="<?php echo esc_url(home_url('/leadership')); ?>">Leadership</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/careers')); ?>">Careers</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/news')); ?>">News and Articles</a></li>
+                            <li><a href="<?php echo esc_url(home_url('/community-resources')); ?>">Community Resources</a></li>
+                        </ul>
+                    </li>
                     <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact Us</a></li>
                 </ul>
             </nav>

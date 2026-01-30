@@ -93,40 +93,6 @@ get_header();
             </div>
         </div>
 
-        <!-- Housing Stabilization -->
-        <div class="service-detail" id="housing">
-            <div class="service-row">
-                <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/housing.jpg" alt="Housing Stabilization Services">
-                </div>
-                <div class="service-content">
-                    <h2 class="service-heading">Housing Stabilization Services</h2>
-                    <p>Our Housing Stabilization Services help individuals find and maintain safe, stable housing in the community.</p>
-                    
-                    <h4>Housing Transition Services</h4>
-                    <p>We assist individuals in finding and securing housing:</p>
-                    <ul class="service-list">
-                        <li>Housing search assistance</li>
-                        <li>Application completion support</li>
-                        <li>Understanding lease terms and tenant rights</li>
-                        <li>Assistance with move-in logistics</li>
-                        <li>Connecting with community resources</li>
-                    </ul>
-
-                    <h4>Housing Sustaining Services</h4>
-                    <p>We help individuals maintain their housing:</p>
-                    <ul class="service-list">
-                        <li>Budget management and financial planning</li>
-                        <li>Tenant education and advocacy</li>
-                        <li>Conflict resolution with landlords</li>
-                        <li>Connection to supportive services</li>
-                        <li>Crisis prevention and intervention</li>
-                    </ul>
-                    
-                    <a href="<?php echo esc_url(home_url('/referrals')); ?>" class="btn btn-primary">Make a Referral</a>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 

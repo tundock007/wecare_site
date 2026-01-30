@@ -15,27 +15,36 @@ Tags: healthcare, care, services, responsive, modern
    CSS Variables - WeCare Official Brand Colors
    ========================================================================== */
 :root {
-    /* Primary Brand Colors */
+    /* Primary Brand Colors - WeCare Style Guide */
     --terracotta: #CE7D4D;         /* PMS 722 C - Warm Brown/Orange */
     --orange: #F7941D;             /* PMS 1495 C - Bright Orange */
     --teal: #3E645D;               /* PMS 5545 C - Teal/Dark Green */
     --forest: #204230;             /* PMS 560 C - Dark Forest Green */
-    
+
     /* Semantic Color Mapping */
     --primary-color: #3E645D;      /* Teal - Main brand color */
-    --secondary-color: #F7941D;    /* Orange - Accent/CTA color */
+    --secondary-color: #F7941D;    /* Orange - CTA/buttons */
     --accent-color: #CE7D4D;       /* Terracotta - Warm accent */
     --dark-color: #204230;         /* Forest Green - Dark elements */
-    
+
+    /* Theme Colors (used in page templates) */
+    --primary-green: #3E645D;
+    --primary-green-dark: #204230;
+    --accent-orange: #F7941D;
+    --accent-terracotta: #CE7D4D;
+
     /* Neutral Colors */
     --light-color: #F5F5F5;
+    --light-gray: #f8f9fa;
     --text-color: #333333;
     --text-light: #666666;
     --white: #FFFFFF;
-    
-    /* Typography - Museo & Century Gothic */
-    --font-primary: 'Museo', 'Century Gothic', 'Avenir', sans-serif;
-    --font-secondary: 'Century Gothic', 'Avenir', 'Poppins', sans-serif;
+
+    /* Typography - Museo (Josefin Sans) & Century Gothic (Poppins) */
+    --font-heading: 'Josefin Sans', 'Century Gothic', 'Avenir', sans-serif;
+    --font-body: 'Poppins', 'Century Gothic', 'Avenir', sans-serif;
+    --font-primary: var(--font-heading);
+    --font-secondary: var(--font-body);
 }
 
 /* ==========================================================================
@@ -48,7 +57,7 @@ Tags: healthcare, care, services, responsive, modern
 }
 
 body {
-    font-family: var(--font-secondary);
+    font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.7;
     color: var(--text-color);
@@ -66,12 +75,18 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary);
+    font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
+    color: var(--teal);
 }
+
+h1 { font-size: 2.75rem; font-weight: 700; }
+h2 { font-size: 2.25rem; font-weight: 600; }
+h3 { font-size: 1.5rem; font-weight: 600; }
+h4 { font-size: 1.25rem; font-weight: 600; }
 
 h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
 h2 { font-size: clamp(2rem, 4vw, 3rem); }
@@ -171,7 +186,7 @@ img {
 .main-navigation a {
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--dark-color);
     padding: 15px 20px;
     display: block;
@@ -255,9 +270,9 @@ img {
 .btn-staff {
     background-color: var(--accent-color);
     color: var(--white) !important;
-    padding: 10px 20px;
+    padding: 8px 18px;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -266,11 +281,11 @@ img {
 }
 
 .btn-client {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--white) !important;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -405,11 +420,11 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
+    padding: 0.875rem 2rem;
     border-radius: 50px;
     font-family: var(--font-primary);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1rem;
     text-transform: none;
     letter-spacing: 0.02em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -417,6 +432,7 @@ img {
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -892,11 +908,10 @@ img {
    Page Hero
    ========================================================================== */
 .page-hero {
-    background: linear-gradient(135deg, var(--primary-color), #1e4263);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
     color: var(--white);
     padding: 120px 0 60px;
     text-align: center;
-    margin-top: 90px;
 }
 
 .page-title {
@@ -1249,7 +1264,6 @@ img {
 @media (max-width: 768px) {
     .page-hero {
         padding: 100px 0 50px;
-        margin-top: 70px;
     }
     
     .page-title {
@@ -1305,4 +1319,225 @@ img {
 
 .important-notice strong {
     color: #d68910;
+}
+
+/* ==========================================================================
+   Consistent Page Layout Utilities
+   ========================================================================== */
+
+/* Section Padding */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-padding-sm {
+    padding: 3rem 0;
+}
+
+/* Background Utilities */
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-green);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Page Hero - Consistent Styling */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: white;
+    padding: 140px 0 80px;
+    text-align: center;
+}
+
+.page-hero .page-title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero .page-subtitle,
+.page-hero .hero-description {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Consistent CTA Section */
+.cta-section-bottom {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section-bottom h2 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.cta-section-bottom p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Button Utilities - Additional variants */
+.btn-outline-white {
+    background: transparent;
+    color: white !important;
+    border: 2px solid white;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--primary-green) !important;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Card Utilities */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-accent {
+    border-left: 4px solid var(--accent-orange);
+}
+
+/* Intro Content Block */
+.intro-block {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.intro-block h2 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.intro-block p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Grid Utilities */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-hero {
+        padding: 120px 0 60px;
+    }
+
+    .page-hero .page-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 100px 0 50px;
+    }
+
+    .page-hero .page-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn-white,
+    .cta-buttons .btn-outline-white {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
 }

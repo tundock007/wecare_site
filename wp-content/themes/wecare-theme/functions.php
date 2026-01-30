@@ -50,10 +50,10 @@ function wecare_enqueue_assets() {
     // Adobe Fonts (Museo) - You'll need to add your Adobe Fonts project ID
     // wp_enqueue_style('wecare-adobe-fonts', 'https://use.typekit.net/YOUR_PROJECT_ID.css', array(), null);
     
-    // Google Fonts fallback (Century Gothic alternative)
+    // Google Fonts - Museo alternative (Josefin Sans) and Century Gothic alternative (Poppins)
     wp_enqueue_style(
         'wecare-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Questrial&display=swap',
+        'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap',
         array(),
         null
     );

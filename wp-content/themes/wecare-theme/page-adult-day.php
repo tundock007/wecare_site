@@ -1,115 +1,313 @@
 <?php
 /**
- * Template Name: Adult Day Services Page
- * 
- * @package WeCare
+ * Template Name: Adult Day Services
+ * Description: Adult Day Services page
  */
 
 get_header();
 ?>
 
-<!-- Page Hero -->
-<section class="page-hero">
-    <div class="container">
-        <h1 class="page-title">Daytime Care That Builds Confidence and Community</h1>
-        <p class="page-subtitle">Adult Day Services & Outpatient Therapy Services</p>
-    </div>
-</section>
+<main id="main" class="site-main">
+    <!-- Page Hero with Intro -->
+    <section class="page-hero" style="background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);">
+        <div class="container">
+            <h1 class="page-title">Adult Day Services</h1>
+            <p class="hero-description">A warm and inclusive space where older adults can stay active, connect with others, and receive personalized support—especially for individuals from refugee and diverse cultural backgrounds.</p>
+        </div>
+    </section>
 
-<!-- Adult Day Services Overview -->
-<section class="section ads-overview">
-    <div class="container">
-        <div class="content-grid">
-            <div class="content-text">
-                <p>WeCare's Adult Day Services offer a warm and inclusive space where older adults can stay active, connect with others, and receive personalized support. From health monitoring and fitness activities to nutritious meals and engaging social programs, our team is dedicated to promoting independence, well-being, and a strong sense of belonging—especially for individuals from refugee and diverse cultural backgrounds.</p>
+    <!-- Services Grid -->
+    <section class="ads-services section-padding">
+        <div class="container">
+            <div class="services-grid-3">
+                <!-- Inclusive Community -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-lounge.webp" alt="Adult Day Services Lounge">
+                    </div>
+                    <div class="service-content">
+                        <h3>Inclusive Community</h3>
+                        <p>A welcoming space where all clients feel valued and supported through meaningful engagement and culturally responsive care.</p>
+                    </div>
+                </div>
+
+                <!-- Physical Therapy -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-gym.webp" alt="Physical Therapy Gym">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fitness & Physical Therapy</h3>
+                        <p>Well-equipped gym with cardio and strength-training equipment, group classes, and individual sessions to support mobility and independence.</p>
+                    </div>
+                </div>
+
+                <!-- Meal Service -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-dining.webp" alt="Meal Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>Nutritious Meals</h3>
+                        <p>Freshly prepared, dietician-approved meals daily with options for dietary restrictions and cultural preferences.</p>
+                    </div>
+                </div>
+
+                <!-- Transportation -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-transportation.webp" alt="Transportation Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>Transportation</h3>
+                        <p>Safe, dependable daily transportation to and from our facility so clients can attend programs with ease.</p>
+                    </div>
+                </div>
+
+                <!-- Health Management -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-health.webp" alt="Health Management">
+                    </div>
+                    <div class="service-content">
+                        <h3>Health Monitoring</h3>
+                        <p>Regular health assessments, wellness programs, and nurse-led check-ins to maintain physical and mental well-being.</p>
+                    </div>
+                </div>
+
+                <!-- Social Programs -->
+                <div class="service-card-img">
+                    <div class="service-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-community.webp" alt="Social Programs">
+                    </div>
+                    <div class="service-content">
+                        <h3>Social Programs</h3>
+                        <p>Engaging recreational activities that promote personal growth, independence, and meaningful social connections.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Adult Day Services Section -->
-<section class="section adult-day-services">
-    <div class="container">
-        <h2>Adult Day Services</h2>
-        <div class="service-content">
-            <p>At our Adult Day Center, we are dedicated to delivering a broad range of services tailored to support the unique needs, goals, and preferences of every individual we serve. Our compassionate and skilled team provides life-skill development, guided fitness activities, and a variety of enriching recreational programs designed to promote personal growth, independence, and social connection.</p>
-            
-            <p>We proudly serve refugee and immigrant communities, creating a warm, inclusive space where all clients feel valued and supported. Through meaningful engagement and culturally responsive care, we empower individuals to thrive and confidently navigate everyday life in their communities.</p>
-        </div>
-    </div>
-</section>
+    <!-- Eligibility & CTA Combined -->
+    <section class="ads-eligibility-cta section-padding">
+        <div class="container">
+            <div class="eligibility-cta-grid">
+                <div class="eligibility-content">
+                    <h2>Who We Serve</h2>
+                    <p>Our Adult Day Services are designed for individuals aged <strong>55 and older</strong> seeking support, socialization, and services to enhance their quality of life.</p>
 
-<!-- Services Grid -->
-<section class="section services-grid">
-    <div class="container">
-        <h2>Our Comprehensive Services</h2>
-        <div class="services-list">
-            <!-- Physical Therapy -->
-            <div class="service-item">
-                <h3>Physical Therapy</h3>
-                <p>Our Physical Therapy program is designed to help clients maintain, regain, and improve their physical well-being in a supportive and safe environment. Each exercise routine is carefully reviewed and approved by a licensed Physical Therapist to ensure it meets the unique needs of every individual. Sessions are led by trained Activity Assistants who guide and motivate clients through customized routines.</p>
-                
-                <p>In our well-equipped gym, clients can choose from a range of cardio and strength-training equipment, whether in group classes or individual sessions. Our goal is to support mobility, strength, and independence helping each person stay active and confident in their daily life.</p>
-            </div>
-            
-            <!-- Meal Service -->
-            <div class="service-item">
-                <h3>Meal Service</h3>
-                <p>At WeCare, we understand that proper nutrition is essential to maintaining strength, energy, and overall wellness—especially for older adults and individuals with specific health needs. That's why our licensed Dietician develops personalized meal plans that carefully consider each client's dietary restrictions, medical conditions, and cultural or religious preferences.</p>
-                
-                <p>We provide freshly prepared, catered meals every day, offering a variety of delicious and well-balanced options to support each client's health and satisfaction. Our goal is to ensure that every meal served at our center not only meets nutritional standards but also brings comfort, enjoyment, and a sense of home to our clients.</p>
-            </div>
-            
-            <!-- Transportation -->
-            <div class="service-item">
-                <h3>Transportation</h3>
-                <p>We understand that having reliable transportation is essential for our clients to fully access and enjoy the wide range of services we provide. To ensure convenience and peace of mind, our caring and professional staff coordinate safe, dependable transportation to and from our facility every day.</p>
-                
-                <p>This seamless service removes the common challenges and worries associated with travel, allowing clients to attend their programs and activities with ease and confidence. By offering this supportive transportation option, we help break down barriers to participation, promote consistency, and create a stress-free experience for everyone.</p>
-            </div>
-            
-            <!-- Health Management -->
-            <div class="service-item">
-                <h3>Health Management</h3>
-                <p>At WeCare, the health and wellness of our clients is at the forefront of everything we do. We take a proactive approach by closely monitoring each client's health status to ensure they receive the care and attention they deserve. Our team offers a range of health-focused workshops and training sessions aimed at promoting a balanced, healthy, and stress-free lifestyle.</p>
-                
-                <p>Our skilled nurse conducts regular health assessments to keep track of any changes in health and provides referrals to specialized care providers as needed, ensuring that clients get the right support at the right time. By combining regular health check-ins with our comprehensive wellness programs, we empower clients to maintain both their physical and mental well-being while staying engaged in all the activities and services we offer.</p>
+                    <div class="eligibility-requirements">
+                        <div class="requirement-item">
+                            <span class="check-icon">✓</span>
+                            <span>Age 55 or older</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="check-icon">✓</span>
+                            <span>Certified disability</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="check-icon">✓</span>
+                            <span>MA insurance coverage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-content">
+                    <h2>Get Started Today</h2>
+                    <p>Contact us to learn more about enrollment and how we can support you or your loved one.</p>
+                    <div class="cta-buttons-vertical">
+                        <a href="<?php echo esc_url(home_url('/referrals')); ?>" class="btn btn-primary btn-large">Make a Referral</a>
+                        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-outline btn-large">Contact Us</a>
+                        <a href="tel:3202814449" class="phone-link">Or call (320) 281-4449</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 
-<!-- Eligibility Section -->
-<section class="section eligibility">
-    <div class="container">
-        <h2>Eligibility</h2>
-        <div class="eligibility-content">
-            <p>Our Adult Day Services are specifically designed for individuals aged 55 and older who seek support, socialization, and access to various services to enhance their quality of life. We offer a welcoming environment for older adults, including those with diverse backgrounds and needs.</p>
-            
-            <div class="eligibility-requirements">
-                <h3>To be eligible for our services, clients must have:</h3>
-                <ul>
-                    <li>A certified disability</li>
-                    <li>Be at least 55 years old</li>
-                    <li>Possess MA insurance</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+<style>
+/* Hero Enhancement */
+.hero-description {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    font-size: 1.15rem;
+    opacity: 0.95;
+    line-height: 1.7;
+}
 
-<!-- Call to Action -->
-<section class="section cta-section">
-    <div class="container">
-        <div class="cta-content">
-            <h2>Join Our Community Today</h2>
-            <p>Discover how our Adult Day Services can enhance your quality of life with social connection, health support, and meaningful activities.</p>
-            <div class="cta-buttons">
-                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary">Contact Us Today</a>
-                <a href="<?php echo esc_url(home_url('/referrals')); ?>" class="btn btn-secondary">Make a Referral</a>
-            </div>
-        </div>
-    </div>
-</section>
+/* Services Section Spacing */
+.ads-services {
+    padding-top: 4rem;
+}
+
+/* Services Grid */
+.services-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card-img {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.service-card-img .service-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.service-card-img .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card-img:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-card-img .service-content {
+    padding: 1.5rem;
+}
+
+.service-card-img .service-content h3 {
+    color: var(--primary-green);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-card-img .service-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Eligibility & CTA Section */
+.ads-eligibility-cta {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: white;
+}
+
+.eligibility-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.eligibility-content h2,
+.cta-content h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.eligibility-content p,
+.cta-content p {
+    opacity: 0.95;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.eligibility-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.cta-content {
+    background: rgba(255,255,255,0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.cta-buttons-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-large {
+    width: 100%;
+    max-width: 280px;
+}
+
+.phone-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.phone-link:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eligibility-cta-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cta-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .eligibility-content h2,
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+}
+</style>
 
 <?php get_footer(); ?>
