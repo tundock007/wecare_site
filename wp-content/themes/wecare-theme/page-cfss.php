@@ -63,15 +63,15 @@ get_header();
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
                     </div>
                     <h3>Health Support</h3>
-                    <p>Assistance with health-related tasks and medication reminders</p>
+                    <p>Medication reminders, health monitoring, and assistance with prescribed exercises</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
-                    <h3>Transportation</h3>
-                    <p>Help getting to appointments and community activities</p>
+                    <h3>Accompaniment</h3>
+                    <p>Support worker accompanies you to appointments, errands, and community activities</p>
                 </div>
 
                 <div class="service-card">
@@ -89,27 +89,27 @@ get_header();
     <section class="cfss-eligibility section-padding">
         <div class="container">
             <h2 class="section-title text-center">Eligibility Requirements</h2>
-            <p class="section-subtitle text-center">Who qualifies for CFSS services</p>
+            <p class="section-subtitle text-center">To qualify for CFSS services, you must meet all of the following criteria</p>
 
             <div class="eligibility-cards">
                 <div class="eligibility-card">
-                    <h3>Insurance Coverage</h3>
-                    <p>Personal Care Assistant services are not covered by private insurance or Medicare. However, they can be covered by Medicaid.</p>
+                    <h3>Health Coverage</h3>
+                    <p>Must be enrolled in Medical Assistance (MA), Alternative Care (AC), a Home and Community-Based Services (HCBS) waiver, or MinnesotaCare (for pregnant individuals and those under 19).</p>
                 </div>
 
                 <div class="eligibility-card">
-                    <h3>Financial Qualification</h3>
-                    <p>Recipients must be receiving MN Medical Assistance (MA), or be eligible for services through a waiver program.</p>
+                    <h3>Living Situation</h3>
+                    <p>Cannot reside in a hospital, nursing facility, ICF/DD, or foster care setting licensed for more than six residents. Cannot live in housing owned or controlled by your CFSS provider agency.</p>
                 </div>
 
                 <div class="eligibility-card">
-                    <h3>Medical Necessity</h3>
-                    <p>The CFSS service must be medically necessary based on an assessment of your needs.</p>
+                    <h3>Assessment Requirements</h3>
+                    <p>A formal assessment must demonstrate you need hands-on assistance or supervision for activities of daily living, or have Level I behavior needs.</p>
                 </div>
 
                 <div class="eligibility-card">
-                    <h3>Decision-Making</h3>
-                    <p>The recipient must be able to make decisions about their care or have a responsible party living with them who can make the decisions.</p>
+                    <h3>Ability to Direct Care</h3>
+                    <p>You must be able to direct your own care or have an authorized representative who can identify your needs, direct and evaluate worker performance, and manage health and safety arrangements.</p>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ get_header();
                 <ul class="resource-links">
                     <li><a href="https://mn.gov/dhs/people-we-serve/people-with-disabilities/services/home-community/programs-and-services/cfss.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - CFSS Program Information</a></li>
                     <li><a href="https://mn.gov/dhs/people-we-serve/people-with-disabilities/services/home-community/programs-and-services/pca.jsp" target="_blank" rel="noopener noreferrer">Minnesota DHS - Personal Care Assistance</a></li>
-                    <li><a href="https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=id_000094" target="_blank" rel="noopener noreferrer">Minnesota DHS - Medical Assistance Eligibility</a></li>
+                    <li><a href="https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=CFSS-0003" target="_blank" rel="noopener noreferrer">Minnesota DHS - CFSS Eligibility Requirements</a></li>
                 </ul>
             </div>
         </div>

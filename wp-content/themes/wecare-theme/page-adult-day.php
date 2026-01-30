@@ -45,7 +45,7 @@ get_header();
                 <!-- Meal Service -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-dining.webp" alt="Meal Service">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Meal Service.webp" alt="Meal Service">
                     </div>
                     <div class="service-content">
                         <h3>Nutritious Meals</h3>
@@ -56,7 +56,7 @@ get_header();
                 <!-- Transportation -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-transportation.webp" alt="Transportation Service">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-dining.webp" alt="Transportation Service">
                     </div>
                     <div class="service-content">
                         <h3>Transportation</h3>

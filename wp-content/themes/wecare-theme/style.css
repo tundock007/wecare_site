@@ -2322,8 +2322,7 @@ body.mobile-menu-open {
 /* Hero Clean */
 .hero-clean {
     background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
-    padding: 160px 0 100px;
-    min-height: 70vh;
+    padding: 160px 0 40px;
     display: flex;
     align-items: center;
 }
@@ -2573,8 +2572,7 @@ body.mobile-menu-open {
 
 @media (max-width: 768px) {
     .hero-clean {
-        padding: 140px 0 80px;
-        min-height: auto;
+        padding: 120px 0 30px;
     }
 
     .hero-clean-buttons {

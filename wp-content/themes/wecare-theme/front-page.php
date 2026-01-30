@@ -28,67 +28,108 @@ get_header();
     </div>
 </section>
 
-<!-- Services - Simple Grid -->
-<section class="section services-simple">
+<!-- Services - With Images -->
+<section class="section services-images">
     <div class="container">
         <h2 class="section-title-center">How We Can Help</h2>
 
-        <div class="services-simple-grid">
-            <a href="<?php echo esc_url(home_url('/behavioral-health')); ?>" class="service-simple-card">
-                <div class="service-simple-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <div class="services-images-grid">
+            <a href="<?php echo esc_url(home_url('/behavioral-health')); ?>" class="service-image-card">
+                <div class="service-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="Mental Health Services">
                 </div>
-                <h3>Mental Health Services</h3>
-                <p>ARMHS and outpatient therapy for adults with mental health needs</p>
+                <div class="service-image-content">
+                    <h3>Mental Health Services</h3>
+                    <p>ARMHS and outpatient therapy for adults with mental health needs</p>
+                    <span class="service-link-text">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                </div>
             </a>
 
-            <a href="<?php echo esc_url(home_url('/cfss')); ?>" class="service-simple-card">
-                <div class="service-simple-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <a href="<?php echo esc_url(home_url('/cfss')); ?>" class="service-image-card">
+                <div class="service-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="CFSS Personal Care">
                 </div>
-                <h3>CFSS / Personal Care</h3>
-                <p>In-home assistance with daily living activities</p>
+                <div class="service-image-content">
+                    <h3>CFSS / Personal Care</h3>
+                    <p>In-home assistance with daily living activities</p>
+                    <span class="service-link-text">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                </div>
             </a>
 
-            <a href="<?php echo esc_url(home_url('/adult-day')); ?>" class="service-simple-card">
-                <div class="service-simple-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <a href="<?php echo esc_url(home_url('/adult-day')); ?>" class="service-image-card">
+                <div class="service-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="Adult Day Services">
                 </div>
-                <h3>Adult Day Services</h3>
-                <p>Structured daytime program with activities and respite for families</p>
+                <div class="service-image-content">
+                    <h3>Adult Day Services</h3>
+                    <p>Structured daytime program with activities and respite for families</p>
+                    <span class="service-link-text">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                </div>
             </a>
 
-            <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>" class="service-simple-card">
-                <div class="service-simple-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>" class="service-image-card">
+                <div class="service-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/MNSure Navigation - Home, Our Services & Referrals Page.webp" alt="MNSure Navigation">
                 </div>
-                <h3>MNsure Navigation</h3>
-                <p>Free help applying for health insurance coverage</p>
+                <div class="service-image-content">
+                    <h3>MNsure Navigation</h3>
+                    <p>Free help applying for health insurance coverage</p>
+                    <span class="service-link-text">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                </div>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Why WeCare - Simple -->
-<section class="section why-simple">
+<!-- Why WeCare - With Image -->
+<section class="section why-wecare-image">
     <div class="container">
-        <div class="why-simple-content">
-            <h2>Why Families Choose WeCare</h2>
-            <ul class="why-simple-list">
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span><strong>Culturally Responsive</strong> — Care that respects your background and values</span>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span><strong>Medical Assistance Accepted</strong> — We work with MA and most insurance plans</span>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span><strong>Experienced Team</strong> — Dedicated professionals committed to your wellbeing</span>
-                </li>
-            </ul>
-            <a href="<?php echo esc_url(home_url('/about')); ?>" class="btn btn-secondary">Learn About Us</a>
+        <div class="why-wecare-grid">
+            <div class="why-wecare-content">
+                <h2>Why Families Choose WeCare</h2>
+                <ul class="why-wecare-list">
+                    <li>
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="why-text">
+                            <strong>Culturally Responsive</strong>
+                            <span>Care that respects your background and values</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="why-text">
+                            <strong>Medical Assistance Accepted</strong>
+                            <span>We work with MA and most insurance plans</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="why-text">
+                            <strong>Experienced Team</strong>
+                            <span>Dedicated professionals committed to your wellbeing</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="why-text">
+                            <strong>Community Focused</strong>
+                            <span>Serving Central Minnesota and the Metro area</span>
+                        </div>
+                    </li>
+                </ul>
+                <a href="<?php echo esc_url(home_url('/about')); ?>" class="btn btn-primary">Learn About Us</a>
+            </div>
+            <div class="why-wecare-image">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/WeCare Brochure - Home Page.webp" alt="WeCare Team">
+            </div>
         </div>
     </div>
 </section>
@@ -133,5 +174,191 @@ get_header();
         </div>
     </div>
 </section>
+
+<style>
+/* Services with Images */
+.services-images {
+    background: var(--light-gray);
+}
+
+.services-images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.service-image-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.service-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-image-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-image-content {
+    padding: 1.5rem;
+}
+
+.service-image-content h3 {
+    color: var(--primary-green);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-image-content p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.service-link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-orange);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.service-link-text svg {
+    transition: transform 0.3s ease;
+}
+
+.service-image-card:hover .service-link-text svg {
+    transform: translateX(4px);
+}
+
+/* Why WeCare with Image */
+.why-wecare-image-section {
+    background: white;
+}
+
+.why-wecare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.why-wecare-content h2 {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.why-wecare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.why-wecare-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.why-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--primary-green);
+}
+
+.why-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-text strong {
+    color: var(--primary-green);
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.why-text span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.why-wecare-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.why-wecare-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-wecare-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .why-wecare-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-images-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+}
+
+/* Reduce padding on home page sections */
+.services-images,
+.why-wecare-image,
+.stats-section {
+    padding: 60px 0;
+}
+
+.cta-simple {
+    padding: 50px 0;
+}
+</style>
 
 <?php get_footer(); ?>
