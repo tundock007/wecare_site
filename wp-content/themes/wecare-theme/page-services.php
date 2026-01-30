@@ -27,7 +27,7 @@ get_header();
         <div class="service-detail" id="behavioral-health">
             <div class="service-row">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/behavioral-health.jpg" alt="Behavioral Health Services">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="Behavioral Health Services">
                 </div>
                 <div class="service-content">
                     <h2 class="service-heading">Behavioral Health Services</h2>
@@ -67,7 +67,7 @@ get_header();
         <div class="service-detail" id="pca">
             <div class="service-row reverse">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pca-services.jpg" alt="Personal Care Assistance">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="Personal Care Assistance">
                 </div>
                 <div class="service-content">
                     <h2 class="service-heading">Personal Care Assistance (PCA)</h2>

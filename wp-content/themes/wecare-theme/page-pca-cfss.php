@@ -38,7 +38,7 @@ get_header();
                 <p>These services provide help with daily activities like bathing, dressing, mobility, and meal preparation—encouraging greater independence and confidence. At WeCare, we're committed to delivering compassionate, personalized care that supports each client's unique needs and enhances their overall quality of life.</p>
             </div>
             <div class="service-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pca-services.jpg" alt="Personal Care Assistants PCA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="CFSS Services" />
             </div>
         </div>
     </div>

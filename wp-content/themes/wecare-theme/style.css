@@ -358,6 +358,129 @@ img {
 .hamburger::before { top: -8px; }
 .hamburger::after { bottom: -8px; }
 
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    max-width: 350px;
+    height: 100%;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.mobile-menu-overlay.is-active .mobile-menu-content {
+    transform: translateX(0);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.mobile-nav {
+    margin-top: 60px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav > ul > li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav > ul > li > a {
+    display: block;
+    padding: 15px 0;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.mobile-nav > ul > li > a:hover {
+    color: var(--primary-green);
+}
+
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.mobile-nav .has-submenu.is-open .mobile-submenu {
+    display: block;
+}
+
+.mobile-submenu li a {
+    display: block;
+    padding: 10px 0;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.mobile-submenu li a:hover {
+    color: var(--primary-green);
+}
+
+.mobile-menu-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.mobile-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.mobile-menu-actions .btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
 /* ==========================================================================
    Hero Section - Modern Full Width
    ========================================================================== */
@@ -644,11 +767,18 @@ img {
     background: linear-gradient(180deg, var(--light-color) 0%, var(--white) 100%);
 }
 
+.why-choose-section h2 {
+    text-align: center;
+}
+
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feature-card {
@@ -731,6 +861,7 @@ img {
     font-size: clamp(2rem, 4vw, 2.75rem);
     margin-bottom: 16px;
     font-weight: 700;
+    color: white;
 }
 
 .cta-section p {
@@ -829,6 +960,173 @@ img {
 .footer-bottom-links .separator {
     color: rgba(255, 255, 255, 0.4);
     margin: 0 1rem;
+}
+
+/* ==========================================================================
+   Footer - Centered Minimal Style (Option 1)
+   ========================================================================== */
+.site-footer-centered {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.site-footer-centered .container {
+    max-width: 900px;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-services-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-services-nav a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-services-nav a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-services-nav .dot {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+}
+
+.footer-contact-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-contact-line span,
+.footer-contact-line a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact-line a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-line a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-contact-line .dot {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social a:hover {
+    color: var(--accent-orange);
+    transform: translateY(-2px);
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.25rem;
+}
+
+.footer-bottom-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-bottom-centered a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-centered a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-bottom-centered .separator {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom-centered .copyright {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Centered - Mobile Responsive */
+@media (max-width: 768px) {
+    .site-footer-centered {
+        padding: 40px 0 30px;
+    }
+
+    .footer-services-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-services-nav .dot {
+        display: none;
+    }
+
+    .footer-contact-line {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-contact-line .dot {
+        display: none;
+    }
+
+    .footer-bottom-centered {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-bottom-centered .separator {
+        display: none;
+    }
 }
 
 /* External Resources Section */

@@ -198,6 +198,7 @@ get_header();
 .type-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .type-card p {

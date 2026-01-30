@@ -14,6 +14,25 @@
         }
     });
 
+    // Mobile Menu Toggle
+    $('.mobile-menu-toggle').on('click', function() {
+        $('body').addClass('mobile-menu-open');
+        $('.mobile-menu-overlay').addClass('is-active');
+    });
+
+    $('.mobile-menu-close, .mobile-menu-overlay').on('click', function(e) {
+        if (e.target === this) {
+            $('body').removeClass('mobile-menu-open');
+            $('.mobile-menu-overlay').removeClass('is-active');
+        }
+    });
+
+    // Mobile submenu toggle
+    $('.mobile-nav .has-submenu > a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('is-open');
+    });
+
     // Smooth scroll for anchor links
     $('a[href^="#"]').on('click', function(e) {
         var target = $(this.getAttribute('href'));

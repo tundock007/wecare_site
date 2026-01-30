@@ -49,6 +49,44 @@ get_header();
         </div>
     </section>
 
+    <!-- Service Areas -->
+    <section class="about-areas section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Where We Serve</h2>
+            <p class="section-subtitle text-center">Providing compassionate care across Minnesota</p>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Cloud - About Us Page.webp" alt="St. Cloud Area">
+                    </div>
+                    <h3>St. Cloud Area</h3>
+                    <p>Central Minnesota</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Paul Minneapolis - About Us Page.webp" alt="Metro Twin Cities">
+                    </div>
+                    <h3>Metro Twin Cities</h3>
+                    <p>Minneapolis & St. Paul</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Alexandria - About Us Page.webp" alt="Alexandria Area">
+                    </div>
+                    <h3>Alexandria Area</h3>
+                    <p>West Central Minnesota</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Winona - About Us Page.webp" alt="Winona Area">
+                    </div>
+                    <h3>Winona Area</h3>
+                    <p>Southeast Minnesota</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Core Values -->
     <section class="about-values section-padding">
         <div class="container">
@@ -233,6 +271,52 @@ get_header();
     transform: translateY(-2px);
 }
 
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.area-card {
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+}
+
+.area-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.area-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.area-card h3 {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    margin: 1rem 0 0.25rem;
+    padding: 0 1rem;
+}
+
+.area-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0 1rem 1rem;
+}
+
 .about-cta {
     background: var(--primary-green);
 }
@@ -255,6 +339,10 @@ get_header();
 
     .values-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

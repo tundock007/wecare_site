@@ -26,8 +26,8 @@ get_header();
             <div class="team-grid">
                 <!-- Ola - CEO -->
                 <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Ola">
                     </div>
                     <div class="member-info">
                         <h3>Ola</h3>
@@ -38,7 +38,7 @@ get_header();
                 <!-- Anna Stefanelli -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-anna.jpg" alt="Anna Stefanelli">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Anna - Leadership Page.webp" alt="Anna Stefanelli">
                     </div>
                     <div class="member-info">
                         <h3>Anna Stefanelli</h3>
@@ -48,8 +48,8 @@ get_header();
 
                 <!-- Deb Hesli -->
                 <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Deb Hesli">
                     </div>
                     <div class="member-info">
                         <h3>Deb Hesli</h3>
@@ -60,7 +60,7 @@ get_header();
                 <!-- Naima Hussein -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-naima.jpg" alt="Naima Hussein">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Naima - Leadership Page.webp" alt="Naima Hussein">
                     </div>
                     <div class="member-info">
                         <h3>Naima Hussein</h3>
@@ -71,7 +71,7 @@ get_header();
                 <!-- Kathy Mandery -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/leadership-kathy.jpg" alt="Kathy Mandery">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Kathy - Leadership Page.webp" alt="Kathy Mandery">
                     </div>
                     <div class="member-info">
                         <h3>Kathy Mandery</h3>
@@ -81,8 +81,8 @@ get_header();
 
                 <!-- Lynn Karst -->
                 <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Lynn Karst">
                     </div>
                     <div class="member-info">
                         <h3>Lynn Karst</h3>
@@ -92,8 +92,8 @@ get_header();
 
                 <!-- Amanda Sand -->
                 <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Amanda Sand">
                     </div>
                     <div class="member-info">
                         <h3>Amanda Sand</h3>
@@ -103,8 +103,8 @@ get_header();
 
                 <!-- Donnyel Panek -->
                 <div class="team-member">
-                    <div class="member-photo placeholder">
-                        <span>Coming Soon</span>
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Donnyel Panek">
                     </div>
                     <div class="member-info">
                         <h3>Donnyel Panek</h3>

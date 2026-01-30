@@ -1,51 +1,57 @@
-    <footer id="colophon" class="site-footer">
+    <footer id="colophon" class="site-footer site-footer-centered">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section footer-about">
-                    <h4><?php esc_html_e('About WeCare', 'wecare'); ?></h4>
-                    <p><?php esc_html_e('WeCare provides compassionate, culturally responsive care services in the greater St. Cloud, Minnesota area. We are committed to helping individuals lead complete and independent lives.', 'wecare'); ?></p>
-                </div>
-
-                <div class="footer-section footer-services">
-                    <h4><?php esc_html_e('Our Services', 'wecare'); ?></h4>
-                    <ul>
-                        <li><a href="<?php echo esc_url(home_url('/behavioral-health')); ?>"><?php esc_html_e('ARMHS', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/adult-day')); ?>"><?php esc_html_e('Adult Day Services', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/outpatient-therapy')); ?>"><?php esc_html_e('Outpatient Therapy', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/cfss')); ?>"><?php esc_html_e('CFSS', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>"><?php esc_html_e('MNSure Navigator', 'wecare'); ?></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section footer-links">
-                    <h4><?php esc_html_e('Quick Links', 'wecare'); ?></h4>
-                    <ul>
-                        <li><a href="<?php echo esc_url(home_url('/about')); ?>"><?php esc_html_e('About Us', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/referrals')); ?>"><?php esc_html_e('Referrals', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/careers')); ?>"><?php esc_html_e('Careers', 'wecare'); ?></a></li>
-                        <li><a href="<?php echo esc_url(home_url('/contact')); ?>"><?php esc_html_e('Contact Us', 'wecare'); ?></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section footer-contact">
-                    <h4><?php esc_html_e('Contact Info', 'wecare'); ?></h4>
-                    <p><?php esc_html_e('136 Division Street', 'wecare'); ?><br>
-                    <?php esc_html_e('Waite Park, MN 56387', 'wecare'); ?></p>
-                    <div class="footer-contact-info">
-                        <a href="tel:3202814449">📞 (320) 281-4449</a>
-                        <a href="mailto:info@wecaremn.com">✉️ info@wecaremn.com</a>
-                    </div>
-                </div>
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Logo">
+                </a>
             </div>
 
-            <div class="footer-bottom-links">
-                <a href="<?php echo esc_url(home_url('/privacy')); ?>"><?php esc_html_e('Data Privacy Notice', 'wecare'); ?></a>
+            <!-- Services Links -->
+            <nav class="footer-services-nav">
+                <a href="<?php echo esc_url(home_url('/behavioral-health')); ?>">ARMHS</a>
+                <span class="dot">•</span>
+                <a href="<?php echo esc_url(home_url('/adult-day')); ?>">Adult Day</a>
+                <span class="dot">•</span>
+                <a href="<?php echo esc_url(home_url('/outpatient-therapy')); ?>">Therapy</a>
+                <span class="dot">•</span>
+                <a href="<?php echo esc_url(home_url('/cfss')); ?>">CFSS</a>
+                <span class="dot">•</span>
+                <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>">MNSure</a>
+            </nav>
+
+            <!-- Contact Info -->
+            <div class="footer-contact-line">
+                <span>136 Division St, Waite Park, MN 56387</span>
+                <span class="dot">•</span>
+                <a href="tel:3202814449">(320) 281-4449</a>
+                <span class="dot">•</span>
+                <a href="mailto:info@wecaremn.com">info@wecaremn.com</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="https://www.facebook.com/wecaremn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/wecare-mn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Bottom Links -->
+            <div class="footer-bottom-centered">
+                <a href="<?php echo esc_url(home_url('/privacy')); ?>">Privacy Notice</a>
                 <span class="separator">|</span>
-                <a href="<?php echo esc_url(home_url('/non-discrimination')); ?>"><?php esc_html_e('Non-Discrimination Notice', 'wecare'); ?></a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> WeCare. All rights reserved.</p>
+                <a href="<?php echo esc_url(home_url('/non-discrimination')); ?>">Non-Discrimination</a>
+                <span class="separator">|</span>
+                <span class="copyright">&copy; <?php echo date('Y'); ?> WeCare</span>
             </div>
         </div>
     </footer>

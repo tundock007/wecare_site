@@ -23,7 +23,7 @@ get_header();
                 <!-- Inclusive Community -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-lounge.webp" alt="Adult Day Services Lounge">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="Adult Day Services">
                     </div>
                     <div class="service-content">
                         <h3>Inclusive Community</h3>

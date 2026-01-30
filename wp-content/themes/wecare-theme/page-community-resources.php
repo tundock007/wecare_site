@@ -28,6 +28,9 @@ get_header();
             <div class="resources-grid">
                 <!-- Stearns County -->
                 <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Stearns - Community Resources.webp" alt="Stearns County">
+                    </div>
                     <h3>Stearns County</h3>
                     <div class="resource-details">
                         <p class="resource-phone">
@@ -40,6 +43,9 @@ get_header();
 
                 <!-- Sherburne County -->
                 <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Sherburne - Community Resources.webp" alt="Sherburne County">
+                    </div>
                     <h3>Sherburne County</h3>
                     <div class="resource-details">
                         <p class="resource-phone">
@@ -52,6 +58,9 @@ get_header();
 
                 <!-- Benton County -->
                 <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Benton - Community Resources.webp" alt="Benton County">
+                    </div>
                     <h3>Benton County</h3>
                     <div class="resource-details">
                         <p class="resource-phone">
@@ -64,6 +73,9 @@ get_header();
 
                 <!-- Wright County -->
                 <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Wright - Community Resources.webp" alt="Wright County">
+                    </div>
                     <h3>Wright County</h3>
                     <div class="resource-details">
                         <p class="resource-phone">
@@ -123,22 +135,35 @@ get_header();
 
 .resource-card {
     background: white;
-    padding: 2rem;
+    padding: 0;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     text-align: center;
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .resource-card:hover {
     transform: translateY(-5px);
 }
 
+.resource-image {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .resource-card h3 {
+    padding: 1.5rem 1.5rem 1rem;
     color: var(--primary-green);
     font-size: 1.35rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 0;
     border-bottom: 2px solid var(--accent-orange);
 }
 
@@ -146,6 +171,7 @@ get_header();
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem 1.5rem 1.5rem;
 }
 
 .resource-phone {
