@@ -121,7 +121,7 @@ get_header();
 }
 
 .resources-intro p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     color: var(--text-color);
 }
@@ -162,7 +162,7 @@ get_header();
 .resource-card h3 {
     padding: 1.5rem 1.5rem 1rem;
     color: var(--primary-green);
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
     margin-bottom: 0;
     border-bottom: 2px solid var(--accent-orange);
 }
@@ -219,13 +219,13 @@ get_header();
 }
 
 .crisis-content p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1.5rem;
 }
 
 .crisis-phone {
     display: inline-block;
-    font-size: 2rem;
+    font-size: var(--font-size-section);
     font-weight: 700;
     color: var(--primary-green);
     text-decoration: none;
@@ -268,7 +268,7 @@ get_header();
     }
 
     .crisis-phone {
-        font-size: 1.5rem;
+        font-size: var(--font-size-heading);
     }
 }
 </style>

@@ -159,7 +159,7 @@ get_header();
 }
 
 .mnsure-intro-content p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -219,13 +219,13 @@ get_header();
 
 .mnsure-service-card h3 {
     color: var(--primary-green);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.75rem;
 }
 
 .mnsure-service-card p {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     line-height: 1.6;
 }
 
@@ -245,7 +245,7 @@ get_header();
 }
 
 .program-card h3 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.75rem;
     color: white;
 }
@@ -285,13 +285,13 @@ get_header();
 
 .why-list strong {
     color: var(--primary-green);
-    font-size: 1.05rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.25rem;
 }
 
 .why-list span {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .mnsure-resources {

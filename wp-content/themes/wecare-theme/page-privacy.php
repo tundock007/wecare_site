@@ -116,7 +116,7 @@ get_header();
 
 .legal-section h3 {
     color: var(--accent-orange);
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
     margin-bottom: 1rem;
 }
 

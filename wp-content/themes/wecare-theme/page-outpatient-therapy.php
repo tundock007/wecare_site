@@ -132,7 +132,7 @@ get_header();
 
 .service-areas-badge span {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .overview-content-full {
@@ -145,7 +145,7 @@ get_header();
 }
 
 .overview-content-full p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -172,7 +172,7 @@ get_header();
 
 .condition-card h3 {
     color: var(--primary-green);
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.5rem;
 }
 
@@ -196,13 +196,13 @@ get_header();
 }
 
 .type-card h3 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1rem;
     color: white;
 }
 
 .type-card p {
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     opacity: 0.9;
     line-height: 1.6;
 }

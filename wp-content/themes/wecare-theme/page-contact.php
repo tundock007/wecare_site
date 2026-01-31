@@ -234,7 +234,7 @@ get_header();
 
 .contact-text h4 {
     color: var(--primary-green);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     font-weight: 600;
     margin-bottom: 0.25rem;
     text-transform: uppercase;
@@ -265,7 +265,7 @@ get_header();
 
 .contact-social h4 {
     color: var(--primary-green);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     font-weight: 600;
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -332,14 +332,14 @@ get_header();
 }
 
 .map-business-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     font-weight: 600;
     color: #1a73e8;
     margin: 0 0 0.25rem 0;
 }
 
 .map-business-card .business-address {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     color: #5f6368;
     margin: 0 0 0.75rem 0;
 }
@@ -357,13 +357,13 @@ get_header();
 }
 
 .map-business-card .rating-text {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     font-weight: 500;
     color: #202124;
 }
 
 .map-business-card .review-count {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     color: #1a73e8;
     text-decoration: none;
 }
@@ -376,7 +376,7 @@ get_header();
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     color: #1a73e8;
     text-decoration: none;
     font-weight: 500;

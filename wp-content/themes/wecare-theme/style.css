@@ -45,6 +45,14 @@ Tags: healthcare, care, services, responsive, modern
     --font-body: 'Poppins', 'Century Gothic', 'Avenir', sans-serif;
     --font-primary: var(--font-heading);
     --font-secondary: var(--font-body);
+
+    /* Font Sizes - Change these to update across entire site */
+    --font-size-hero: clamp(24px, 4vw, 30px);      /* Hero/page titles (h1) */
+    --font-size-section: clamp(16px, 3vw, 20px);   /* Section titles (h2) */
+    --font-size-heading: 14px;                      /* Card/subsection headings (h3/h4) */
+    --font-size-body: 12px;                         /* Body text, paragraphs */
+    --font-size-small: 11px;                        /* Small text, captions */
+    --font-size-button: 10px;                       /* Buttons */
 }
 
 /* ==========================================================================
@@ -58,7 +66,7 @@ Tags: healthcare, care, services, responsive, modern
 
 body {
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--white);
@@ -83,14 +91,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--teal);
 }
 
-h1 { font-size: 2.75rem; font-weight: 700; }
-h2 { font-size: 2.25rem; font-weight: 600; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-h4 { font-size: 1.25rem; font-weight: 600; }
-
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h1 { font-size: var(--font-size-hero); font-weight: 700; }
+h2 { font-size: var(--font-size-section); font-weight: 600; }
+h3 { font-size: var(--font-size-heading); font-weight: 600; }
+h4 { font-size: var(--font-size-heading); font-weight: 600; }
 
 img {
     max-width: 100%;
@@ -164,14 +168,14 @@ img {
 
 .logo-name {
     font-family: var(--font-primary);
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--primary-color);
     line-height: 1;
 }
 
 .logo-tagline {
-    font-size: 12px;
+    font-size: var(--font-size-body);
     color: var(--text-light);
     letter-spacing: 0.5px;
 }
@@ -198,7 +202,7 @@ img {
 .main-navigation a {
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px; /* Navigation exception */
     color: var(--dark-color);
     padding: 15px 20px;
     display: block;
@@ -272,7 +276,7 @@ img {
 }
 
 .header-info {
-    font-size: 13px;
+    font-size: var(--font-size-body);
     color: var(--text-light);
 }
 
@@ -290,7 +294,7 @@ img {
     color: var(--white) !important;
     padding: 10px 20px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: var(--font-size-heading);
     font-weight: 600;
     border: none;
 }
@@ -304,7 +308,7 @@ img {
     color: var(--white) !important;
     padding: 10px 20px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: var(--font-size-heading);
     font-weight: 600;
 }
 
@@ -313,7 +317,7 @@ img {
 }
 
 .header-phone {
-    font-size: 13px;
+    font-size: var(--font-size-body);
     color: var(--text-light);
 }
 
@@ -425,7 +429,7 @@ img {
     padding: 15px 0;
     color: var(--text-color);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     text-decoration: none;
 }
 
@@ -448,7 +452,7 @@ img {
     padding: 10px 0;
     color: var(--text-light);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .mobile-submenu li a:hover {
@@ -526,7 +530,7 @@ body.mobile-menu-open {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: var(--font-size-hero);
     font-weight: 700;
     margin-bottom: 24px;
     text-shadow: none;
@@ -535,7 +539,7 @@ body.mobile-menu-open {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: var(--font-size-body);
     line-height: 1.8;
     opacity: 0.9;
     max-width: 800px;
@@ -561,12 +565,12 @@ body.mobile-menu-open {
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: var(--font-size-hero);
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-size: var(--font-size-body);
     opacity: 0.9;
     margin-bottom: 30px;
 }
@@ -582,7 +586,7 @@ body.mobile-menu-open {
     border-radius: 50px;
     font-family: var(--font-primary);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: var(--font-size-button);
     text-transform: none;
     letter-spacing: 0.02em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -647,7 +651,7 @@ body.mobile-menu-open {
 }
 
 .section-title-center {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: var(--font-size-section);
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 70px;
@@ -717,19 +721,19 @@ body.mobile-menu-open {
 }
 
 .service-heading {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: var(--font-size-heading);
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
 .service-intro {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 15px;
     color: var(--text-color);
 }
 
 .service-focus {
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     margin: 25px 0 15px;
     color: var(--dark-color);
     font-weight: 600;
@@ -745,7 +749,7 @@ body.mobile-menu-open {
     padding-left: 28px;
     margin-bottom: 12px;
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     line-height: 1.6;
 }
 
@@ -822,14 +826,14 @@ body.mobile-menu-open {
 }
 
 .feature-card h4 {
-    font-size: 1.125rem;
+    font-size: var(--font-size-body);
     color: var(--dark-color);
     margin-bottom: 12px;
     font-weight: 600;
 }
 
 .feature-card p {
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     color: var(--text-light);
     line-height: 1.7;
 }
@@ -858,14 +862,14 @@ body.mobile-menu-open {
 }
 
 .cta-section h2 {
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: var(--font-size-section);
     margin-bottom: 16px;
     font-weight: 700;
     color: white;
 }
 
 .cta-section p {
-    font-size: 1.125rem;
+    font-size: var(--font-size-body);
     opacity: 0.9;
     margin-bottom: 36px;
     max-width: 500px;
@@ -898,8 +902,7 @@ body.mobile-menu-open {
 .footer-section h4 {
     color: var(--secondary-color);
     margin-bottom: 24px;
-    font-size: 1.125rem;
-    font-size: 18px;
+    font-size: var(--font-size-heading);
 }
 
 .footer-section ul {
@@ -936,7 +939,7 @@ body.mobile-menu-open {
     text-align: center;
     padding-top: 15px;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+    font-size: var(--font-size-small);
 }
 
 /* Footer Bottom Links */
@@ -949,7 +952,7 @@ body.mobile-menu-open {
 
 .footer-bottom-links a {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: var(--font-size-body);
     transition: color 0.3s ease;
 }
 
@@ -998,7 +1001,7 @@ body.mobile-menu-open {
 .footer-services-nav a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -1009,17 +1012,18 @@ body.mobile-menu-open {
 
 .footer-services-nav .dot {
     color: rgba(255, 255, 255, 0.4);
-    font-size: 0.75rem;
+    font-size: var(--font-size-button);
 }
 
 .footer-contact-line {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: var(--font-size-body);
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
 }
 
 .footer-contact-line span,
@@ -1038,7 +1042,7 @@ body.mobile-menu-open {
 
 .footer-contact-line .dot {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 0.75rem;
+    font-size: var(--font-size-button);
 }
 
 .footer-social {
@@ -1072,9 +1076,10 @@ body.mobile-menu-open {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: var(--font-size-small);
     flex-wrap: wrap;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
 }
 
 .footer-bottom-centered a {
@@ -1140,7 +1145,7 @@ body.mobile-menu-open {
 
 .external-resources h3 {
     color: var(--primary-green);
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.75rem;
 }
 
@@ -1187,7 +1192,7 @@ body.mobile-menu-open {
     padding: 1rem 1.5rem;
     border-radius: 8px;
     margin: 1.5rem 0;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
 }
 
 .service-areas strong {
@@ -1204,7 +1209,7 @@ body.mobile-menu-open {
     border-radius: 8px;
     margin-bottom: 1.5rem;
     border-left: 4px solid var(--primary-green);
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 /* ==========================================================================
@@ -1223,7 +1228,8 @@ body.mobile-menu-open {
         display: block;
     }
     
-    .header-right {
+    .header-right,
+    .header-actions {
         display: none;
     }
     
@@ -1243,11 +1249,11 @@ body.mobile-menu-open {
     }
     
     .hero-title {
-        font-size: 28px;
+        font-size: var(--font-size-hero);
     }
     
     .hero-subtitle {
-        font-size: 14px;
+        font-size: var(--font-size-heading);
     }
     
     .service-row {
@@ -1281,7 +1287,7 @@ body.mobile-menu-open {
     }
     
     .section-title-center {
-        font-size: 24px;
+        font-size: var(--font-size-body);
     }
 }
 
@@ -1334,7 +1340,7 @@ body.mobile-menu-open {
 .mt-1 { margin-top: 10px; }
 .mt-2 { margin-top: 20px; }
 .mt-3 { margin-top: 30px; }
-.lead { font-size: 1.25rem; color: var(--text-light); }
+.lead { font-size: var(--font-size-body); color: var(--text-light); }
 
 /* ==========================================================================
    Page Hero
@@ -1347,12 +1353,12 @@ body.mobile-menu-open {
 }
 
 .page-title {
-    font-size: 42px;
+    font-size: var(--font-size-hero);
     margin-bottom: 15px;
 }
 
 .page-subtitle {
-    font-size: 18px;
+    font-size: var(--font-size-body);
     opacity: 0.9;
 }
 
@@ -1456,7 +1462,7 @@ body.mobile-menu-open {
 
 .team-info p {
     color: var(--text-light);
-    font-size: 14px;
+    font-size: var(--font-size-heading);
 }
 
 /* ==========================================================================
@@ -1490,7 +1496,7 @@ body.mobile-menu-open {
 }
 
 .contact-text h4 {
-    font-size: 16px;
+    font-size: var(--font-size-body);
     margin-bottom: 5px;
     color: var(--dark-color);
 }
@@ -1559,7 +1565,7 @@ body.mobile-menu-open {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: var(--font-secondary);
-    font-size: 15px;
+    font-size: var(--font-size-body);
     transition: border-color 0.3s ease;
 }
 
@@ -1610,11 +1616,11 @@ body.mobile-menu-open {
 .referral-card h4 {
     color: var(--primary-color);
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: var(--font-size-body);
 }
 
 .referral-card > p {
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     margin-bottom: 15px;
     color: var(--text-color);
@@ -1622,7 +1628,7 @@ body.mobile-menu-open {
 
 .referral-card > p:last-child {
     margin-bottom: 0;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     color: var(--text-light);
 }
 
@@ -1667,7 +1673,7 @@ body.mobile-menu-open {
 }
 
 .referral-form-container .form-header h2 {
-    font-size: 24px;
+    font-size: var(--font-size-hero);
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--primary-green);
@@ -1675,7 +1681,7 @@ body.mobile-menu-open {
 
 .referral-form-container .form-header p {
     color: #6b7280;
-    font-size: 14px;
+    font-size: var(--font-size-heading);
     margin: 0;
 }
 
@@ -1694,7 +1700,7 @@ body.mobile-menu-open {
 }
 
 .referral-form-container .section-title {
-    font-size: 16px;
+    font-size: var(--font-size-body);
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 16px;
@@ -1712,7 +1718,7 @@ body.mobile-menu-open {
 }
 
 .referral-form-container .section-note {
-    font-size: 13px;
+    font-size: var(--font-size-body);
     color: #6b7280;
     margin-bottom: 16px;
 }
@@ -1734,7 +1740,7 @@ body.mobile-menu-open {
 }
 
 .referral-form-container label {
-    font-size: 13px;
+    font-size: var(--font-size-body);
     font-weight: 500;
     color: #374151;
     margin-bottom: 6px;
@@ -1755,7 +1761,7 @@ body.mobile-menu-open {
     padding: 10px 12px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: var(--font-size-heading);
     line-height: 1.5;
     min-height: 40px;
     transition: border-color 0.15s, box-shadow 0.15s;
@@ -1837,7 +1843,7 @@ body.mobile-menu-open {
 }
 
 .referral-form-container .file-note {
-    font-size: 12px;
+    font-size: var(--font-size-body);
     color: #6b7280;
     margin-top: 4px;
 }
@@ -1852,11 +1858,11 @@ body.mobile-menu-open {
 .referral-form-container .consent-box h4 {
     color: #92400e;
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
 }
 
 .referral-form-container .consent-box p {
-    font-size: 13px;
+    font-size: var(--font-size-body);
     color: #78350f;
     margin-bottom: 12px;
     line-height: 1.6;
@@ -1876,7 +1882,7 @@ body.mobile-menu-open {
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: var(--font-size-body);
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s;
@@ -2040,7 +2046,7 @@ body.mobile-menu-open {
     }
     
     .page-title {
-        font-size: 28px;
+        font-size: var(--font-size-hero);
     }
     
     .about-grid,
@@ -2138,7 +2144,7 @@ body.mobile-menu-open {
 
 .section-subtitle {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 2rem;
 }
 
@@ -2159,7 +2165,7 @@ body.mobile-menu-open {
 .page-hero .page-subtitle,
 .page-hero .hero-description {
     color: rgba(255, 255, 255, 0.95);
-    font-size: 1.15rem;
+    font-size: var(--font-size-body);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.7;
@@ -2179,7 +2185,7 @@ body.mobile-menu-open {
 
 .cta-section-bottom p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1.5rem;
 }
 
@@ -2204,7 +2210,7 @@ body.mobile-menu-open {
 
 .btn-large {
     padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
 }
 
 /* Card Utilities */
@@ -2237,7 +2243,7 @@ body.mobile-menu-open {
 }
 
 .intro-block p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     color: var(--text-color);
 }
@@ -2336,7 +2342,7 @@ body.mobile-menu-open {
 
 .hero-clean-content h1 {
     color: var(--white);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: var(--font-size-hero);
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 700;
@@ -2344,7 +2350,7 @@ body.mobile-menu-open {
 
 .hero-clean-content > p {
     color: rgba(255,255,255,0.9);
-    font-size: 1.15rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     margin-bottom: 32px;
 }
@@ -2415,13 +2421,13 @@ body.mobile-menu-open {
 }
 
 .service-simple-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     color: var(--forest);
     margin-bottom: 8px;
 }
 
 .service-simple-card p {
-    font-size: 14px;
+    font-size: var(--font-size-body);
     color: var(--text-light);
     line-height: 1.5;
     margin: 0;
@@ -2439,7 +2445,7 @@ body.mobile-menu-open {
 }
 
 .why-simple-content h2 {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-size: var(--font-size-section);
     color: var(--forest);
     margin-bottom: 32px;
 }
@@ -2457,7 +2463,7 @@ body.mobile-menu-open {
     gap: 12px;
     padding: 16px 0;
     border-bottom: 1px solid #eee;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--text-color);
 }
 
@@ -2490,7 +2496,7 @@ body.mobile-menu-open {
 
 .stat-number {
     display: block;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-size: var(--font-size-hero);
     font-weight: 700;
     color: var(--primary-green);
     font-family: var(--font-heading);
@@ -2500,7 +2506,7 @@ body.mobile-menu-open {
 
 .stat-label {
     display: block;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--text-light);
     font-weight: 500;
 }
@@ -2546,13 +2552,13 @@ body.mobile-menu-open {
 
 .cta-simple-content h2 {
     color: var(--white);
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-size: var(--font-size-section);
     margin-bottom: 12px;
 }
 
 .cta-simple-content > p {
     color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 28px;
 }
 

@@ -225,13 +225,13 @@ get_header();
 
 .service-image-content h3 {
     color: var(--primary-green);
-    font-size: 1.15rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.5rem;
 }
 
 .service-image-content p {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     line-height: 1.5;
     margin-bottom: 1rem;
 }
@@ -242,7 +242,7 @@ get_header();
     gap: 0.5rem;
     color: var(--accent-orange);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
 }
 
 .service-link-text svg {
@@ -267,7 +267,7 @@ get_header();
 
 .why-wecare-content h2 {
     color: var(--primary-green);
-    font-size: 2rem;
+    font-size: var(--font-size-section);
     margin-bottom: 2rem;
 }
 
@@ -302,13 +302,13 @@ get_header();
 
 .why-text strong {
     color: var(--primary-green);
-    font-size: 1.05rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.25rem;
 }
 
 .why-text span {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
 }
 
 .why-wecare-image {

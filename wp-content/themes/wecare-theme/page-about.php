@@ -171,7 +171,7 @@ get_header();
 }
 
 .mission-statement {
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
     line-height: 1.8;
     color: var(--text-color);
     font-style: italic;
@@ -190,7 +190,7 @@ get_header();
 }
 
 .overview-content p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -206,7 +206,7 @@ get_header();
 .info-card h4 {
     color: var(--primary-green);
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
 }
 
 .info-card p {
@@ -236,12 +236,12 @@ get_header();
 
 .value-card h3 {
     color: var(--primary-green);
-    font-size: 1.15rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.5rem;
 }
 
 .value-card p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     color: var(--text-color);
     line-height: 1.5;
 }
@@ -305,14 +305,14 @@ get_header();
 
 .area-card h3 {
     color: var(--primary-green);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin: 1rem 0 0.25rem;
     padding: 0 1rem;
 }
 
 .area-card p {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     margin: 0;
     padding: 0 1rem 1rem;
 }
@@ -352,7 +352,7 @@ get_header();
     }
 
     .mission-statement {
-        font-size: 1.15rem;
+        font-size: var(--font-size-body);
     }
 }
 

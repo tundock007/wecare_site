@@ -119,13 +119,13 @@ get_header();
 
 .legal-section h3 {
     color: var(--accent-orange);
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
     margin-bottom: 1rem;
 }
 
 .legal-section h4 {
     color: var(--primary-green);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.5rem;
 }
 
@@ -175,7 +175,7 @@ get_header();
 
 .complaint-option p {
     margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .effective-date {

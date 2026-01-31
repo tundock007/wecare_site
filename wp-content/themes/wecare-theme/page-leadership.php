@@ -111,6 +111,17 @@ get_header();
                         <p class="member-title">ARMHS Supervisor - Metro MN</p>
                     </div>
                 </div>
+
+                <!-- Hamdi Ahmed -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Hamdi Ahmed">
+                    </div>
+                    <div class="member-info">
+                        <h3>Hamdi Ahmed</h3>
+                        <p class="member-title">ADS Program Coordinator</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -136,7 +147,7 @@ get_header();
 }
 
 .team-intro p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     color: var(--text-color);
     line-height: 1.7;
 }
@@ -175,20 +186,20 @@ get_header();
 
 .member-photo.placeholder span {
     color: #888;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     font-weight: 500;
 }
 
 .member-info h3 {
     color: var(--primary-green);
-    font-size: 1.2rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.35rem;
 }
 
 .member-title {
     color: var(--accent-orange);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .leadership-cta {

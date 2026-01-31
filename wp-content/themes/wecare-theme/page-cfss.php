@@ -149,7 +149,7 @@ get_header();
 }
 
 .overview-content-full p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -181,7 +181,7 @@ get_header();
 
 .service-card h3 {
     color: var(--primary-green);
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.75rem;
 }
 

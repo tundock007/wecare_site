@@ -66,7 +66,7 @@ get_header();
 }
 
 .news-intro p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     color: var(--text-color);
 }
@@ -87,14 +87,14 @@ get_header();
 
 .news-date {
     color: var(--accent-orange);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     font-weight: 500;
     margin-bottom: 0.75rem;
 }
 
 .news-card h3 {
     color: var(--primary-green);
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
     margin-bottom: 0.75rem;
 }
 

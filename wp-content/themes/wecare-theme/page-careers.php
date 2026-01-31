@@ -92,7 +92,7 @@ get_header();
 }
 
 .intro-content p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -122,14 +122,14 @@ get_header();
 .opening-info h3 {
     color: var(--primary-green);
     margin: 0 0 0.5rem;
-    font-size: 1.35rem;
+    font-size: var(--font-size-heading);
 }
 
 .opening-info .location {
     color: var(--accent-orange);
     font-weight: 500;
     margin: 0 0 0.75rem;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
 }
 
 .opening-info p:last-child {
@@ -155,7 +155,7 @@ get_header();
 
 .email-link {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     color: var(--primary-green);
     font-weight: 600;
     padding: 1rem 2rem;
@@ -171,7 +171,7 @@ get_header();
 }
 
 .apply-note {
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     color: var(--text-light);
     font-style: italic;
 }

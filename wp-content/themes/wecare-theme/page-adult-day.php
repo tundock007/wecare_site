@@ -132,7 +132,7 @@ get_header();
 .hero-description {
     max-width: 700px;
     margin: 1rem auto 0;
-    font-size: 1.15rem;
+    font-size: var(--font-size-body);
     opacity: 0.95;
     line-height: 1.7;
 }
@@ -184,14 +184,14 @@ get_header();
 
 .service-card-img .service-content h3 {
     color: var(--primary-green);
-    font-size: 1.25rem;
+    font-size: var(--font-size-body);
     margin-bottom: 0.75rem;
 }
 
 .service-card-img .service-content p {
     color: var(--text-color);
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     margin: 0;
 }
 
@@ -211,7 +211,7 @@ get_header();
 .eligibility-content h2,
 .cta-content h2 {
     color: white;
-    font-size: 2rem;
+    font-size: var(--font-size-section);
     margin-bottom: 1rem;
 }
 
@@ -219,7 +219,7 @@ get_header();
 .cta-content p {
     opacity: 0.95;
     line-height: 1.7;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1.5rem;
 }
 
@@ -233,7 +233,7 @@ get_header();
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
 }
 
 .check-icon {
@@ -244,7 +244,7 @@ get_header();
     height: 28px;
     background: var(--accent-orange);
     border-radius: 50%;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     font-weight: bold;
 }
 
@@ -270,7 +270,7 @@ get_header();
 .phone-link {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     margin-top: 0.5rem;
 }
 
@@ -300,12 +300,12 @@ get_header();
     }
 
     .hero-description {
-        font-size: 1rem;
+        font-size: var(--font-size-body);
     }
 
     .eligibility-content h2,
     .cta-content h2 {
-        font-size: 1.75rem;
+        font-size: var(--font-size-section);
     }
 }
 </style>
