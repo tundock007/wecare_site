@@ -34,7 +34,7 @@ get_header();
 }
 
 .referral-form-container .form-header h1 {
-    font-size: var(--font-size-section);
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
     color: #111827;
@@ -42,7 +42,7 @@ get_header();
 
 .referral-form-container .form-header p {
     color: #6b7280;
-    font-size: var(--font-size-heading);
+    font-size: 14px;
     margin: 0;
 }
 
@@ -63,7 +63,7 @@ get_header();
 }
 
 .referral-form-container .section-title {
-    font-size: var(--font-size-body);
+    font-size: 16px;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 16px;
@@ -128,7 +128,7 @@ get_header();
 }
 
 .referral-form-container label {
-    font-size: var(--font-size-body);
+    font-size: 13px;
     font-weight: 500;
     color: #374151;
     margin-bottom: 6px;
@@ -149,7 +149,7 @@ get_header();
     padding: 10px 12px !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
-    font-size: var(--font-size-heading) !important;
+    font-size: 14px !important;
     line-height: 1.5 !important;
     height: auto !important;
     min-height: 40px !important;
@@ -249,7 +249,7 @@ get_header();
 }
 
 .referral-form-container .consent-box p {
-    font-size: var(--font-size-body);
+    font-size: 13px;
     color: #78350f;
     margin-bottom: 12px;
 }
@@ -264,7 +264,7 @@ get_header();
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: var(--font-size-heading);
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s;
@@ -343,7 +343,7 @@ get_header();
     color: #374151;
     border: 1px solid #d1d5db;
     border-radius: 6px;
-    font-size: var(--font-size-heading);
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -354,7 +354,7 @@ get_header();
     color: white;
     border: none;
     border-radius: 6px;
-    font-size: var(--font-size-heading);
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -414,22 +414,25 @@ get_header();
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px 16px;
+    padding: 12px 12px;
     border: 2px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 10px;
     background: #fff;
     transition: all 0.2s ease;
+    height: 100%;
+    min-height: 60px;
 }
 
 .referral-form-container .service-card .card-content strong {
-    font-size: var(--font-size-body);
+    font-size: 15px;
     color: #1f2937;
     margin-bottom: 4px;
 }
 
 .referral-form-container .service-card .card-content span {
-    font-size: var(--font-size-body);
+    font-size: 12px;
     color: #6b7280;
 }
 
@@ -456,7 +459,6 @@ get_header();
 }
 
 @media (max-width: 768px) {
-
     .referral-form-container .form-row > .form-group {
         flex: 1 1 calc(50% - 8px);
         min-width: calc(50% - 8px);
@@ -861,7 +863,7 @@ get_header();
                     <!-- Guardian Information -->
                     <div class="form-section" id="guardianSection" style="display: none;">
                         <h3 class="section-title">Guardian Information</h3>
-                        <p style="font-size: var(--font-size-body); color: #6b7280; margin-bottom: 16px;">Required for patients under 18 years of age</p>
+                        <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px;">Required for patients under 18 years of age</p>
                         <div class="form-row cols-2">
                             <div class="form-group">
                                 <label>Guardian First Name</label>
@@ -1024,21 +1026,26 @@ get_header();
                     <!-- Insurance Information -->
                     <div class="form-section" id="insuranceSection" style="display: none;">
                         <h3 class="section-title">Insurance Information</h3>
-                        <div class="form-row cols-2" id="medicaidRow">
+                        <div class="form-row" id="medicaidRow">
                             <div class="form-group">
                                 <label id="medicaidLabel">MA# (Medicaid Number) <span class="required">*</span></label>
                                 <input type="text" name="medicaidId" placeholder="Enter Medicaid ID">
                             </div>
+                        </div>
+                        <div class="form-row" id="medicareRow">
                             <div class="form-group" id="medicareGroup">
-                                <label>Has Medicare?</label>
-                                <select name="hasMedicare">
-                                    <option value="">Select...</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Unknown">Unknown</option>
-                                </select>
+                                <label>Medicare</label>
+                                <div class="radio-group" style="margin-top: 8px;">
+                                    <label class="radio-item">
+                                        <input type="radio" name="hasMedicare" value="Yes"> Yes
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="hasMedicare" value="No"> No
+                                    </label>
+                                </div>
                             </div>
                         </div>
+                        <!-- BH/PCA Insurance Type (Radio) -->
                         <div class="form-row" id="bhInsuranceTypeRow">
                             <div class="form-group full-width">
                                 <label>Insurance Type <span class="required">*</span></label>
@@ -1056,6 +1063,7 @@ get_header();
                                 </div>
                             </div>
                         </div>
+                        <!-- ADS Insurance Type (Checkboxes) -->
                         <div class="form-row" id="adsInsuranceTypeRow" style="display: none;">
                             <div class="form-group full-width">
                                 <label>Insurance Type <span class="required">*</span></label>
@@ -1127,7 +1135,7 @@ get_header();
                         <div class="conditional-section" id="daUploadSection">
                             <label>Please upload the Diagnostic Assessment document</label>
                             <input type="file" name="document" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="margin-top: 8px;">
-                            <p style="font-size: var(--font-size-body); color: #6b7280; margin-top: 4px;">Accepted formats: PDF, DOC, DOCX, JPG, PNG (max 10MB)</p>
+                            <p style="font-size: 12px; color: #6b7280; margin-top: 4px;">Accepted formats: PDF, DOC, DOCX, JPG, PNG (max 10MB)</p>
                         </div>
                         <div class="form-row" style="margin-top: 16px;">
                             <div class="form-group">
@@ -1151,7 +1159,7 @@ get_header();
                                 <div class="checkbox-group">
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="ADC"> Adult Day Care</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="ARMHS"> ARMHS</label>
-                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="Housing Stabilization Services"> Housing Stabilization Services</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="OUTPATIENT"> Outpatient Therapy</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="Counseling"> Counseling</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="OTHER"> Other</label>
                                 </div>
@@ -1239,19 +1247,19 @@ get_header();
 
                     <!-- Referrer Information -->
                     <div class="form-section" id="referrerSection" style="display: none;">
-                        <h3 class="section-title">Referrer's Information</h3>
-                        <p style="font-size: var(--font-size-body); color: #6b7280; margin-bottom: 16px;" id="referrerNote">Information about the person making this referral</p>
+                        <h3 class="section-title">Referrer's information</h3>
+                        <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px;" id="referrerNote">Information about the person making this referral</p>
                         <div class="form-row cols-2">
                             <div class="form-group">
                                 <label id="referrerNameLabel">Referrer's Name</label>
                                 <div class="form-row cols-2" style="margin-bottom: 0;">
                                     <div class="form-group">
                                         <input type="text" name="referrerFirstName" placeholder="">
-                                        <span style="font-size: var(--font-size-small); color: #6b7280;">First Name</span>
+                                        <span style="font-size: 11px; color: #6b7280;">First Name</span>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" name="referrerLastName" placeholder="">
-                                        <span style="font-size: var(--font-size-small); color: #6b7280;">Last Name</span>
+                                        <span style="font-size: 11px; color: #6b7280;">Last Name</span>
                                     </div>
                                 </div>
                             </div>
@@ -1271,7 +1279,7 @@ get_header();
                     <!-- Case Manager Information -->
                     <div class="form-section" id="caseManagerSection" style="display: none;">
                         <h3 class="section-title">Case Manager Information</h3>
-                        <p style="font-size: var(--font-size-body); color: #6b7280; margin-bottom: 16px;" id="caseManagerNote">If applicable</p>
+                        <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px;" id="caseManagerNote">If applicable</p>
                         <div class="form-row cols-2">
                             <div class="form-group">
                                 <label id="cmNameLabel">Case Manager Name</label>
@@ -1345,28 +1353,28 @@ document.addEventListener('DOMContentLoaded', function() {
         behavioral_health: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'insuranceSection', 'clinicalSection', 'bhServicesSection', 'regionSection', 'referrerSection', 'caseManagerSection', 'consentSection'],
             hide: ['pcaTypeSection', 'waiverSection', 'petSection', 'transportSection', 'disabilityTypeSection', 'emergencySection', 'reasonSection', 'referredBySection', 'pcaServicesSection', 'adsServicesSection', 'mnsureServicesSection'],
-            showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: true, medicareGroup: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
+            showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: true, medicareRow: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
             rowClasses: { nameRow: 'cols-2', contactRow: 'cols-3', demographicsRow: 'cols-3' },
             addressRequired: false, caseManagerRequired: false, ethnicityRequired: false
         },
         pca: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'emergencySection', 'pcaTypeSection', 'waiverSection', 'petSection', 'insuranceSection', 'pcaServicesSection', 'referrerSection', 'caseManagerSection', 'reasonSection', 'consentSection'],
             hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'transportSection', 'disabilityTypeSection', 'referredBySection', 'adsServicesSection', 'mnsureServicesSection'],
-            showFields: { middleNameGroup: true, singlePhoneGroup: false, mobilePhoneGroup: true, homePhoneGroup: true, genderGroup: false, medicaidRow: true, medicareGroup: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
+            showFields: { middleNameGroup: true, singlePhoneGroup: false, mobilePhoneGroup: true, homePhoneGroup: true, genderGroup: false, medicaidRow: true, medicareRow: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
             rowClasses: { nameRow: 'cols-3', contactRow: 'cols-4', demographicsRow: 'cols-2' },
             addressRequired: true, caseManagerRequired: true, ethnicityRequired: true
         },
         adult_day_services: {
-            show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'emergencySection', 'transportSection', 'waiverSection', 'disabilityTypeSection', 'insuranceSection', 'adsServicesSection', 'referredBySection', 'caseManagerSection', 'reasonSection', 'consentSection'],
-            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'referrerSection', 'pcaServicesSection', 'mnsureServicesSection'],
-            showFields: { middleNameGroup: true, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: false, medicaidRow: false, medicareGroup: false, bhInsuranceTypeRow: false, adsInsuranceTypeRow: true },
+            show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'emergencySection', 'transportSection', 'waiverSection', 'disabilityTypeSection', 'insuranceSection', 'adsServicesSection', 'referrerSection', 'caseManagerSection', 'reasonSection', 'consentSection'],
+            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'referredBySection', 'pcaServicesSection', 'mnsureServicesSection'],
+            showFields: { middleNameGroup: true, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: false, medicaidRow: false, medicareRow: false, bhInsuranceTypeRow: false, adsInsuranceTypeRow: true },
             rowClasses: { nameRow: 'cols-3', contactRow: 'cols-3', demographicsRow: 'cols-2' },
-            addressRequired: true, caseManagerRequired: true, ethnicityRequired: false
+            addressRequired: true, caseManagerRequired: true, ethnicityRequired: false, referrerRequired: true
         },
         mnsure: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'insuranceSection', 'mnsureServicesSection', 'referrerSection', 'caseManagerSection', 'reasonSection', 'consentSection'],
             hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'waiverSection', 'transportSection', 'disabilityTypeSection', 'emergencySection', 'referredBySection', 'pcaServicesSection', 'adsServicesSection'],
-            showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: false, medicareGroup: true, bhInsuranceTypeRow: false, adsInsuranceTypeRow: false },
+            showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: false, medicareRow: true, bhInsuranceTypeRow: false, adsInsuranceTypeRow: false },
             rowClasses: { nameRow: 'cols-2', contactRow: 'cols-3', demographicsRow: 'cols-3' },
             addressRequired: true, caseManagerRequired: false, ethnicityRequired: false, referrerRequired: true
         }
@@ -1388,7 +1396,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentServiceType = null;
 
     const today = new Date();
-    dateOfBirthInput.setAttribute('max', today.toISOString().split('T')[0]);
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    dateOfBirthInput.setAttribute('max', `${year}-${month}-${day}`);
 
     document.querySelectorAll('input[name="referralType"]').forEach(radio => {
         radio.addEventListener('change', function() {
@@ -1477,7 +1488,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const disabilityLabel = document.getElementById('disabilityLabel');
         disabilityLabel.innerHTML = (serviceType === 'pca' || serviceType === 'adult_day_services' || serviceType === 'mnsure') ? 'Disability <span class="required">*</span>' : 'Disability';
 
-        // Referrer required indicators (MNSure)
         const referrerNameLabel = document.getElementById('referrerNameLabel');
         const referrerPhoneLabel = document.getElementById('referrerPhoneLabel');
         const referrerEmailLabel = document.getElementById('referrerEmailLabel');
@@ -1494,6 +1504,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     stateSelect.addEventListener('change', function() {
         stateOtherRow.style.display = this.value === 'OTHER' ? 'block' : 'none';
+        if (this.value !== 'OTHER') document.getElementById('stateOther').value = '';
     });
 
     dateOfBirthInput.addEventListener('change', function() {
@@ -1530,6 +1541,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // URL parameter pre-selection
+    const urlParams = new URLSearchParams(window.location.search);
+    const preselectedType = urlParams.get('type');
+    if (preselectedType && ['behavioral_health', 'pca', 'adult_day_services', 'mnsure'].includes(preselectedType)) {
+        const radio = document.querySelector(`input[name="referralType"][value="${preselectedType}"]`);
+        if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
+    }
+
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         if (!currentServiceType) { showError('Please select a service type.'); return; }
@@ -1564,7 +1583,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (mobilePhone) formData.set('phone', mobilePhone);
             }
 
-            // Combine referrer first/last name into referrerName
             const referrerFirstName = formData.get('referrerFirstName')?.trim() || '';
             const referrerLastName = formData.get('referrerLastName')?.trim() || '';
             if (referrerFirstName || referrerLastName) {
@@ -1632,7 +1650,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (serviceType === 'adult_day_services') {
             if (document.querySelectorAll('input[name="transportation"]:checked').length === 0) return ['Please select a transportation method.'];
             if (document.querySelectorAll('input[name="waiverType"]:checked').length === 0) return ['Please select at least one waiver type.'];
-            if (!document.querySelector('select[name="referredBy"]').value) return ['Please select who referred the patient.'];
         }
 
         if ((serviceType === 'pca' || serviceType === 'adult_day_services') && !document.querySelector('input[name="hasEmergencyContact"]:checked')) return ['Please indicate if you have emergency contact information.'];
@@ -1652,7 +1669,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if ((serviceType === 'pca' || serviceType === 'adult_day_services' || serviceType === 'mnsure') && !document.querySelector('textarea[name="reasonForReferral"]').value.trim()) return ['Please provide a reason for this referral.'];
 
-        // MNSure-specific validations (referrer required)
         if (serviceType === 'mnsure' || config.referrerRequired) {
             const referrerFirstName = document.querySelector('input[name="referrerFirstName"]');
             const referrerLastName = document.querySelector('input[name="referrerLastName"]');
@@ -1685,30 +1701,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // URL parameter pre-selection
-    const urlParams = new URLSearchParams(window.location.search);
-    const preselectedType = urlParams.get('type');
-    if (preselectedType && ['behavioral_health', 'pca', 'adult_day_services', 'mnsure'].includes(preselectedType)) {
-        const radio = document.querySelector(`input[name="referralType"][value="${preselectedType}"]`);
-        if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
-    }
-
     // Referral card button click handlers
     document.querySelectorAll('.referral-card-btn[data-service]').forEach(button => {
         button.addEventListener('click', function() {
             const serviceType = this.getAttribute('data-service');
             const radio = document.querySelector(`input[name="referralType"][value="${serviceType}"]`);
-
             if (radio) {
-                // Select the service type
                 radio.checked = true;
                 radio.dispatchEvent(new Event('change'));
-
-                // Scroll to the form
                 const formContainer = document.querySelector('.referral-form-container');
-                if (formContainer) {
-                    formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (formContainer) formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
