@@ -11,7 +11,7 @@ get_header();
 <style>
 /* Referral Form Styles */
 .referral-page-wrapper {
-    padding: 40px 20px;
+    padding: 24px 20px;
     background: #f9fafb;
     min-height: 60vh;
 }
@@ -28,31 +28,31 @@ get_header();
 .referral-form-container .form-header {
     background: white;
     color: #1f2937;
-    padding: 24px 32px;
+    padding: 16px 24px;
     text-align: center;
     border-bottom: 1px solid #e5e7eb;
 }
 
 .referral-form-container .form-header h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #111827;
 }
 
 .referral-form-container .form-header p {
     color: #6b7280;
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
 }
 
 .referral-form-container .form-body {
-    padding: 40px 48px;
+    padding: 24px 32px;
 }
 
 .referral-form-container .form-section {
-    margin-bottom: 32px;
-    padding-bottom: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -63,10 +63,10 @@ get_header();
 }
 
 .referral-form-container .section-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #1f2937;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -74,8 +74,8 @@ get_header();
 
 .referral-form-container .section-title::before {
     content: '';
-    width: 4px;
-    height: 20px;
+    width: 3px;
+    height: 16px;
     background: #D4711A;
     border-radius: 2px;
 }
@@ -83,8 +83,8 @@ get_header();
 .referral-form-container .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .referral-form-container .form-row > .form-group {
@@ -131,7 +131,7 @@ get_header();
     font-size: 13px;
     font-weight: 500;
     color: #374151;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .referral-form-container label .required {
@@ -146,13 +146,13 @@ get_header();
 .referral-form-container select,
 .referral-form-container textarea {
     width: 100% !important;
-    padding: 10px 12px !important;
+    padding: 8px 10px !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
     height: auto !important;
-    min-height: 40px !important;
+    min-height: 36px !important;
     max-height: none !important;
     box-sizing: border-box !important;
     transition: border-color 0.15s, box-shadow 0.15s;
@@ -185,15 +185,15 @@ get_header();
 
 .referral-form-container .checkbox-group {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
     align-items: start;
 }
 
 .referral-form-container .checkbox-item {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
 }
 
 .referral-form-container .checkbox-item input[type="checkbox"] {
@@ -207,13 +207,13 @@ get_header();
 .referral-form-container .radio-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 12px;
 }
 
 .referral-form-container .radio-item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .referral-form-container .radio-item input[type="radio"] {
@@ -239,27 +239,29 @@ get_header();
     background: #fef3c7;
     border: 1px solid #f59e0b;
     border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
+    padding: 12px;
+    margin-bottom: 12px;
 }
 
 .referral-form-container .consent-box h4 {
     color: #92400e;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
 }
 
 .referral-form-container .consent-box p {
-    font-size: 13px;
+    font-size: 12px;
     color: #78350f;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .referral-form-container .submit-btn {
-    max-width: 300px;
+    max-width: 280px;
     width: 100%;
     margin: 0 auto;
     display: block;
-    padding: 12px 24px;
+    padding: 10px 20px;
     background: linear-gradient(135deg, #D4711A 0%, #B85E15 100%);
     color: white;
     border: none;
@@ -285,7 +287,7 @@ get_header();
 .referral-form-container .success-message {
     display: none;
     text-align: center;
-    padding: 40px;
+    padding: 24px;
 }
 
 .referral-form-container .success-message.visible {
@@ -393,8 +395,8 @@ get_header();
 .referral-form-container .service-type-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 12px;
+    gap: 10px;
+    margin-top: 8px;
 }
 
 .referral-form-container .service-card {
@@ -416,23 +418,23 @@ get_header();
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 12px 12px;
+    padding: 10px 8px;
     border: 2px solid #e5e7eb;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #fff;
     transition: all 0.2s ease;
     height: 100%;
-    min-height: 60px;
+    min-height: 50px;
 }
 
 .referral-form-container .service-card .card-content strong {
-    font-size: 15px;
+    font-size: 13px;
     color: #1f2937;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .referral-form-container .service-card .card-content span {
-    font-size: 12px;
+    font-size: 11px;
     color: #6b7280;
 }
 
@@ -490,7 +492,7 @@ get_header();
     }
 
     .referral-form-container .form-body {
-        padding: 24px 28px;
+        padding: 16px 20px;
     }
 
     .referral-form-container .checkbox-group {
