@@ -392,7 +392,7 @@ get_header();
 /* Service Type Cards */
 .referral-form-container .service-type-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-top: 12px;
 }
@@ -443,10 +443,19 @@ get_header();
     border-color: #D4711A;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .referral-form-container .service-type-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .referral-form-container .service-type-cards {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
 
     .referral-form-container .form-row > .form-group {
         flex: 1 1 calc(50% - 8px);
@@ -625,7 +634,7 @@ get_header();
                             <p>Certified navigators provide free, in-person help enrolling in Medical Assistance, MinnesotaCare, and other health plans.</p>
                             <p class="eligibility"><strong>Eligibility:</strong> Anyone needing health insurance enrollment assistance</p>
                         </div>
-                        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="referral-card-btn">Contact Us</a>
+                        <button type="button" class="referral-card-btn" data-service="mnsure">Make a Referral</button>
                     </div>
                 </div>
             </div>
@@ -686,6 +695,13 @@ get_header();
                                         <div class="card-content">
                                             <strong>Adult Day Services</strong>
                                             <span>Day Program</span>
+                                        </div>
+                                    </label>
+                                    <label class="service-card">
+                                        <input type="radio" name="referralType" value="mnsure" required>
+                                        <div class="card-content">
+                                            <strong>MNSure</strong>
+                                            <span>Health Insurance Navigator</span>
                                         </div>
                                     </label>
                                 </div>
@@ -1152,9 +1168,25 @@ get_header();
                                 <div class="checkbox-group">
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="ADC"> Adult Day Care</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="ARMHS"> ARMHS</label>
-                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="Housing Stabilization Services"> Housing Stabilization Services</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="OUTPATIENT"> Outpatient Therapy</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="PCA"> PCA</label>
                                     <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="OTHER"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MNSure Services -->
+                    <div class="form-section" id="mnsureServicesSection" style="display: none;">
+                        <h3 class="section-title">Services Interested In</h3>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label>Select all services of interest <span class="required">*</span></label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="ARMHS"> ARMHS</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="OUTPATIENT"> Outpatient Therapy</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="PCA"> PCA</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="servicesInterested" value="Adult Day Services"> Adult Day Services</label>
                                 </div>
                             </div>
                         </div>
@@ -1207,19 +1239,30 @@ get_header();
 
                     <!-- Referrer Information -->
                     <div class="form-section" id="referrerSection" style="display: none;">
-                        <h3 class="section-title">Referrer Information</h3>
-                        <p style="font-size: var(--font-size-body); color: #6b7280; margin-bottom: 16px;">Information about the person making this referral</p>
-                        <div class="form-row cols-3">
+                        <h3 class="section-title">Referrer's Information</h3>
+                        <p style="font-size: var(--font-size-body); color: #6b7280; margin-bottom: 16px;" id="referrerNote">Information about the person making this referral</p>
+                        <div class="form-row cols-2">
                             <div class="form-group">
-                                <label>Your Name</label>
-                                <input type="text" name="referrerName">
+                                <label id="referrerNameLabel">Referrer's Name</label>
+                                <div class="form-row cols-2" style="margin-bottom: 0;">
+                                    <div class="form-group">
+                                        <input type="text" name="referrerFirstName" placeholder="">
+                                        <span style="font-size: var(--font-size-small); color: #6b7280;">First Name</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="referrerLastName" placeholder="">
+                                        <span style="font-size: var(--font-size-small); color: #6b7280;">Last Name</span>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="form-row cols-2">
                             <div class="form-group">
-                                <label>Your Phone</label>
+                                <label id="referrerPhoneLabel">Phone Number</label>
                                 <input type="tel" name="referrerPhone">
                             </div>
                             <div class="form-group">
-                                <label>Your Email</label>
+                                <label id="referrerEmailLabel">Email</label>
                                 <input type="email" name="referrerEmail">
                             </div>
                         </div>
@@ -1294,30 +1337,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const FORM_TITLES = {
         behavioral_health: { title: 'WeCare Behavioral Health Referral', subtitle: 'Complete this form to submit a referral for behavioral health services' },
         pca: { title: 'WeCare PCA Referral', subtitle: 'Complete this form to submit a referral for Personal Care Assistant services' },
-        adult_day_services: { title: 'WeCare Adult Day Services Referral', subtitle: 'Complete this form to submit a referral for Adult Day Services' }
+        adult_day_services: { title: 'WeCare Adult Day Services Referral', subtitle: 'Complete this form to submit a referral for Adult Day Services' },
+        mnsure: { title: 'WeCare Referral', subtitle: 'MNSure Referral' }
     };
 
     const SECTION_CONFIG = {
         behavioral_health: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'insuranceSection', 'clinicalSection', 'bhServicesSection', 'regionSection', 'referrerSection', 'caseManagerSection', 'consentSection'],
-            hide: ['pcaTypeSection', 'waiverSection', 'petSection', 'transportSection', 'disabilityTypeSection', 'emergencySection', 'reasonSection', 'referredBySection', 'pcaServicesSection', 'adsServicesSection'],
+            hide: ['pcaTypeSection', 'waiverSection', 'petSection', 'transportSection', 'disabilityTypeSection', 'emergencySection', 'reasonSection', 'referredBySection', 'pcaServicesSection', 'adsServicesSection', 'mnsureServicesSection'],
             showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: true, medicareGroup: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
             rowClasses: { nameRow: 'cols-2', contactRow: 'cols-3', demographicsRow: 'cols-3' },
             addressRequired: false, caseManagerRequired: false, ethnicityRequired: false
         },
         pca: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'emergencySection', 'pcaTypeSection', 'waiverSection', 'petSection', 'insuranceSection', 'pcaServicesSection', 'referrerSection', 'caseManagerSection', 'reasonSection', 'consentSection'],
-            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'transportSection', 'disabilityTypeSection', 'referredBySection', 'adsServicesSection'],
+            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'transportSection', 'disabilityTypeSection', 'referredBySection', 'adsServicesSection', 'mnsureServicesSection'],
             showFields: { middleNameGroup: true, singlePhoneGroup: false, mobilePhoneGroup: true, homePhoneGroup: true, genderGroup: false, medicaidRow: true, medicareGroup: true, bhInsuranceTypeRow: true, adsInsuranceTypeRow: false },
             rowClasses: { nameRow: 'cols-3', contactRow: 'cols-4', demographicsRow: 'cols-2' },
             addressRequired: true, caseManagerRequired: true, ethnicityRequired: true
         },
         adult_day_services: {
             show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'emergencySection', 'transportSection', 'waiverSection', 'disabilityTypeSection', 'insuranceSection', 'adsServicesSection', 'referredBySection', 'caseManagerSection', 'reasonSection', 'consentSection'],
-            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'referrerSection', 'pcaServicesSection'],
+            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'referrerSection', 'pcaServicesSection', 'mnsureServicesSection'],
             showFields: { middleNameGroup: true, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: false, medicaidRow: false, medicareGroup: false, bhInsuranceTypeRow: false, adsInsuranceTypeRow: true },
             rowClasses: { nameRow: 'cols-3', contactRow: 'cols-3', demographicsRow: 'cols-2' },
             addressRequired: true, caseManagerRequired: true, ethnicityRequired: false
+        },
+        mnsure: {
+            show: ['patientInfoSection', 'addressSection', 'demographicsSection', 'insuranceSection', 'mnsureServicesSection', 'referrerSection', 'caseManagerSection', 'reasonSection', 'consentSection'],
+            hide: ['clinicalSection', 'bhServicesSection', 'regionSection', 'pcaTypeSection', 'petSection', 'waiverSection', 'transportSection', 'disabilityTypeSection', 'emergencySection', 'referredBySection', 'pcaServicesSection', 'adsServicesSection'],
+            showFields: { middleNameGroup: false, singlePhoneGroup: true, mobilePhoneGroup: false, homePhoneGroup: false, genderGroup: true, medicaidRow: false, medicareGroup: true, bhInsuranceTypeRow: false, adsInsuranceTypeRow: false },
+            rowClasses: { nameRow: 'cols-2', contactRow: 'cols-3', demographicsRow: 'cols-3' },
+            addressRequired: true, caseManagerRequired: false, ethnicityRequired: false, referrerRequired: true
         }
     };
 
@@ -1424,7 +1475,21 @@ document.addEventListener('DOMContentLoaded', function() {
         ethnicityLabel.innerHTML = config.ethnicityRequired ? 'Ethnicity <span class="required">*</span>' : 'Ethnicity';
 
         const disabilityLabel = document.getElementById('disabilityLabel');
-        disabilityLabel.innerHTML = (serviceType === 'pca' || serviceType === 'adult_day_services') ? 'Disability <span class="required">*</span>' : 'Disability';
+        disabilityLabel.innerHTML = (serviceType === 'pca' || serviceType === 'adult_day_services' || serviceType === 'mnsure') ? 'Disability <span class="required">*</span>' : 'Disability';
+
+        // Referrer required indicators (MNSure)
+        const referrerNameLabel = document.getElementById('referrerNameLabel');
+        const referrerPhoneLabel = document.getElementById('referrerPhoneLabel');
+        const referrerEmailLabel = document.getElementById('referrerEmailLabel');
+        if (config.referrerRequired) {
+            if (referrerNameLabel) referrerNameLabel.innerHTML = 'Referrer\'s Name <span class="required">*</span>';
+            if (referrerPhoneLabel) referrerPhoneLabel.innerHTML = 'Phone Number <span class="required">*</span>';
+            if (referrerEmailLabel) referrerEmailLabel.innerHTML = 'Email <span class="required">*</span>';
+        } else {
+            if (referrerNameLabel) referrerNameLabel.textContent = 'Referrer\'s Name';
+            if (referrerPhoneLabel) referrerPhoneLabel.textContent = 'Phone Number';
+            if (referrerEmailLabel) referrerEmailLabel.textContent = 'Email';
+        }
     }
 
     stateSelect.addEventListener('change', function() {
@@ -1499,6 +1564,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (mobilePhone) formData.set('phone', mobilePhone);
             }
 
+            // Combine referrer first/last name into referrerName
+            const referrerFirstName = formData.get('referrerFirstName')?.trim() || '';
+            const referrerLastName = formData.get('referrerLastName')?.trim() || '';
+            if (referrerFirstName || referrerLastName) {
+                formData.set('referrerName', `${referrerFirstName} ${referrerLastName}`.trim());
+            }
+            formData.delete('referrerFirstName');
+            formData.delete('referrerLastName');
+
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 30000);
 
@@ -1539,7 +1613,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (config.ethnicityRequired && !document.querySelector('select[name="ethnicity"]').value) return ['Ethnicity is required.'];
 
-        if ((serviceType === 'pca' || serviceType === 'adult_day_services') && !document.querySelector('input[name="disability"]:checked')) return ['Please indicate if patient has a disability.'];
+        if ((serviceType === 'pca' || serviceType === 'adult_day_services' || serviceType === 'mnsure') && !document.querySelector('input[name="disability"]:checked')) return ['Please indicate if patient has a disability.'];
 
         if (serviceType === 'adult_day_services' && document.querySelectorAll('input[name="disabilityType"]:checked').length === 0) return ['Please select at least one disability type.'];
 
@@ -1576,7 +1650,16 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!document.querySelector('input[name="caseManagerEmail"]').value.trim()) return ['Case Manager email is required.'];
         }
 
-        if ((serviceType === 'pca' || serviceType === 'adult_day_services') && !document.querySelector('textarea[name="reasonForReferral"]').value.trim()) return ['Please provide a reason for this referral.'];
+        if ((serviceType === 'pca' || serviceType === 'adult_day_services' || serviceType === 'mnsure') && !document.querySelector('textarea[name="reasonForReferral"]').value.trim()) return ['Please provide a reason for this referral.'];
+
+        // MNSure-specific validations (referrer required)
+        if (serviceType === 'mnsure' || config.referrerRequired) {
+            const referrerFirstName = document.querySelector('input[name="referrerFirstName"]');
+            const referrerLastName = document.querySelector('input[name="referrerLastName"]');
+            if (!referrerFirstName?.value.trim() || !referrerLastName?.value.trim()) return ['Referrer name is required.'];
+            if (!document.querySelector('input[name="referrerPhone"]').value.trim()) return ['Referrer phone is required.'];
+            if (!document.querySelector('input[name="referrerEmail"]').value.trim()) return ['Referrer email is required.'];
+        }
 
         if (!document.querySelector('input[name="dataProtectionConsent"]').checked) return ['You must consent to data protection to submit this form.'];
 
@@ -1605,7 +1688,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // URL parameter pre-selection
     const urlParams = new URLSearchParams(window.location.search);
     const preselectedType = urlParams.get('type');
-    if (preselectedType && ['behavioral_health', 'pca', 'adult_day_services'].includes(preselectedType)) {
+    if (preselectedType && ['behavioral_health', 'pca', 'adult_day_services', 'mnsure'].includes(preselectedType)) {
         const radio = document.querySelector(`input[name="referralType"][value="${preselectedType}"]`);
         if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
     }
