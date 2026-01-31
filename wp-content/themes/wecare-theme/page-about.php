@@ -57,28 +57,28 @@ get_header();
             <div class="areas-grid">
                 <div class="area-card">
                     <div class="area-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Cloud - About Us Page.webp" alt="St. Cloud Area">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Cloud - About Us Page.webp" alt="WeCare mental health and personal care services in St. Cloud Central Minnesota">
                     </div>
                     <h3>St. Cloud Area</h3>
                     <p>Central Minnesota</p>
                 </div>
                 <div class="area-card">
                     <div class="area-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Paul Minneapolis - About Us Page.webp" alt="Metro Twin Cities">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/St. Paul Minneapolis - About Us Page.webp" alt="WeCare mental health services in Minneapolis St. Paul Twin Cities Metro area">
                     </div>
                     <h3>Metro Twin Cities</h3>
                     <p>Minneapolis & St. Paul</p>
                 </div>
                 <div class="area-card">
                     <div class="area-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Alexandria - About Us Page.webp" alt="Alexandria Area">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Alexandria - About Us Page.webp" alt="WeCare mental health and care services in Alexandria Minnesota">
                     </div>
                     <h3>Alexandria Area</h3>
                     <p>West Central Minnesota</p>
                 </div>
                 <div class="area-card">
                     <div class="area-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Winona - About Us Page.webp" alt="Winona Area">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Winona - About Us Page.webp" alt="WeCare mental health and care services in Winona Minnesota">
                     </div>
                     <h3>Winona Area</h3>
                     <p>Southeast Minnesota</p>

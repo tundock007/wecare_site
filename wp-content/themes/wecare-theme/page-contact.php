@@ -128,7 +128,9 @@ get_header();
             <p class="section-subtitle text-center">Have a question? Fill out the form below and we'll get back to you as soon as possible.</p>
 
             <div class="contact-form-wrapper">
-                <form class="contact-form" action="#" method="POST">
+                <div id="form-message" class="form-message" style="display: none;"></div>
+                <form class="contact-form" id="wecare-contact-form" method="POST">
+                    <?php wp_nonce_field('wecare_contact_form', 'contact_nonce'); ?>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="first-name">First Name *</label>
@@ -169,10 +171,63 @@ get_header();
                     </div>
 
                     <div class="form-submit">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
                     </div>
                 </form>
             </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('wecare-contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formMessage = document.getElementById('form-message');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formMessage.style.display = 'none';
+
+        // Prepare form data
+        const formData = new FormData(form);
+        formData.append('action', 'wecare_contact_form');
+        formData.append('nonce', document.getElementById('contact_nonce').value);
+
+        // Send AJAX request
+        fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            formMessage.style.display = 'block';
+
+            if (data.success) {
+                formMessage.className = 'form-message success';
+                formMessage.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ' + data.data.message;
+                form.reset();
+            } else {
+                formMessage.className = 'form-message error';
+                formMessage.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg> ' + data.data.message;
+            }
+
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(error => {
+            formMessage.style.display = 'block';
+            formMessage.className = 'form-message error';
+            formMessage.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg> An error occurred. Please try again or call us at (320) 281-4449.';
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        });
+    });
+});
+</script>
         </div>
     </section>
 </main>
@@ -399,6 +454,38 @@ get_header();
 .form-submit {
     text-align: center;
     margin-top: 1.5rem;
+}
+
+/* Form Messages */
+.form-message {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.form-message.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.form-message svg {
+    flex-shrink: 0;
+}
+
+#submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 /* Responsive */

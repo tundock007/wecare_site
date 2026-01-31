@@ -3,7 +3,7 @@
             <!-- Logo -->
             <div class="footer-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Minnesota - Mental Health and Personal Care Services Logo">
                 </a>
             </div>
 

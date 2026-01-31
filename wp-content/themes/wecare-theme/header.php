@@ -15,7 +15,7 @@
             <!-- Logo -->
             <div class="site-branding">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Logo" class="logo-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/wecare-logo.png" alt="WeCare Minnesota - Mental Health and Personal Care Services Logo" class="logo-image">
                 </a>
             </div>
 
@@ -33,7 +33,6 @@
                             <li><a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>">MNSure Navigator</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
                     <li class="menu-item-has-children">
                         <a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a>
                         <ul class="sub-menu">
@@ -43,6 +42,7 @@
                             <li><a href="<?php echo esc_url(home_url('/community-resources')); ?>">Community Resources</a></li>
                         </ul>
                     </li>
+                    <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
                     <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact Us</a></li>
                 </ul>
             </nav>
@@ -84,7 +84,6 @@
                             <li><a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>">MNSure Navigator</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
                     <li class="has-submenu">
                         <a href="<?php echo esc_url(home_url('/about')); ?>">About Us</a>
                         <ul class="mobile-submenu">
@@ -94,6 +93,7 @@
                             <li><a href="<?php echo esc_url(home_url('/community-resources')); ?>">Community Resources</a></li>
                         </ul>
                     </li>
+                    <li><a href="<?php echo esc_url(home_url('/referrals')); ?>">Referrals</a></li>
                     <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact Us</a></li>
                 </ul>
             </nav>

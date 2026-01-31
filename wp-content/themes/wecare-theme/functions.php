@@ -11,6 +11,223 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * Microsoft Graph API Email Configuration
+ *
+ * IMPORTANT: Set these constants in wp-config.php for security:
+ * define('WECARE_MS_CLIENT_ID', 'your-client-id');
+ * define('WECARE_MS_TENANT_ID', 'your-tenant-id');
+ * define('WECARE_MS_CLIENT_SECRET', 'your-client-secret');
+ */
+if (!defined('WECARE_MS_CLIENT_ID')) {
+    define('WECARE_MS_CLIENT_ID', '');
+}
+if (!defined('WECARE_MS_TENANT_ID')) {
+    define('WECARE_MS_TENANT_ID', '');
+}
+if (!defined('WECARE_MS_CLIENT_SECRET')) {
+    define('WECARE_MS_CLIENT_SECRET', '');
+}
+define('WECARE_MS_FROM_EMAIL', 'office@wecaremn.org');
+define('WECARE_MS_TO_EMAILS', array('ola@wecaremn.org', 'anna.stefanelli@wecaremn.org'));
+
+/**
+ * Get Microsoft Graph API Access Token
+ */
+function wecare_get_ms_access_token() {
+    $token_url = 'https://login.microsoftonline.com/' . WECARE_MS_TENANT_ID . '/oauth2/v2.0/token';
+
+    $response = wp_remote_post($token_url, array(
+        'body' => array(
+            'client_id' => WECARE_MS_CLIENT_ID,
+            'client_secret' => WECARE_MS_CLIENT_SECRET,
+            'scope' => 'https://graph.microsoft.com/.default',
+            'grant_type' => 'client_credentials'
+        ),
+        'timeout' => 30
+    ));
+
+    if (is_wp_error($response)) {
+        return false;
+    }
+
+    $body = json_decode(wp_remote_retrieve_body($response), true);
+
+    if (isset($body['access_token'])) {
+        return $body['access_token'];
+    }
+
+    return false;
+}
+
+/**
+ * Send Email via Microsoft Graph API
+ */
+function wecare_send_ms_email($to, $subject, $body_content, $reply_to = null) {
+    $access_token = wecare_get_ms_access_token();
+
+    if (!$access_token) {
+        return array('success' => false, 'message' => 'Failed to authenticate with email service.');
+    }
+
+    $email_url = 'https://graph.microsoft.com/v1.0/users/' . WECARE_MS_FROM_EMAIL . '/sendMail';
+
+    // Handle multiple recipients (array or single email)
+    $to_recipients = array();
+    if (is_array($to)) {
+        foreach ($to as $email) {
+            $to_recipients[] = array('emailAddress' => array('address' => $email));
+        }
+    } else {
+        $to_recipients[] = array('emailAddress' => array('address' => $to));
+    }
+
+    $email_data = array(
+        'message' => array(
+            'subject' => $subject,
+            'body' => array(
+                'contentType' => 'HTML',
+                'content' => $body_content
+            ),
+            'toRecipients' => $to_recipients,
+            'from' => array(
+                'emailAddress' => array(
+                    'address' => WECARE_MS_FROM_EMAIL,
+                    'name' => 'WeCare Website'
+                )
+            )
+        ),
+        'saveToSentItems' => true
+    );
+
+    // Add reply-to if provided
+    if ($reply_to) {
+        $email_data['message']['replyTo'] = array(
+            array('emailAddress' => array('address' => $reply_to))
+        );
+    }
+
+    $response = wp_remote_post($email_url, array(
+        'headers' => array(
+            'Authorization' => 'Bearer ' . $access_token,
+            'Content-Type' => 'application/json'
+        ),
+        'body' => json_encode($email_data),
+        'timeout' => 30
+    ));
+
+    if (is_wp_error($response)) {
+        return array('success' => false, 'message' => 'Failed to send email: ' . $response->get_error_message());
+    }
+
+    $status_code = wp_remote_retrieve_response_code($response);
+
+    if ($status_code === 202 || $status_code === 200) {
+        return array('success' => true, 'message' => 'Email sent successfully.');
+    }
+
+    $body = json_decode(wp_remote_retrieve_body($response), true);
+    $error_message = isset($body['error']['message']) ? $body['error']['message'] : 'Unknown error occurred.';
+
+    return array('success' => false, 'message' => 'Failed to send email: ' . $error_message);
+}
+
+/**
+ * Handle Contact Form AJAX Submission
+ */
+function wecare_handle_contact_form() {
+    // Verify nonce
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'wecare_contact_form')) {
+        wp_send_json_error(array('message' => 'Security check failed. Please refresh the page and try again.'));
+    }
+
+    // Sanitize inputs
+    $first_name = sanitize_text_field($_POST['first_name'] ?? '');
+    $last_name = sanitize_text_field($_POST['last_name'] ?? '');
+    $email = sanitize_email($_POST['email'] ?? '');
+    $phone = sanitize_text_field($_POST['phone'] ?? '');
+    $subject_type = sanitize_text_field($_POST['subject'] ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+
+    // Validate required fields
+    if (empty($first_name) || empty($last_name) || empty($email) || empty($subject_type) || empty($message)) {
+        wp_send_json_error(array('message' => 'Please fill in all required fields.'));
+    }
+
+    if (!is_email($email)) {
+        wp_send_json_error(array('message' => 'Please enter a valid email address.'));
+    }
+
+    // Map subject types to readable labels
+    $subject_labels = array(
+        'general' => 'General Inquiry',
+        'services' => 'Services Information',
+        'referral' => 'Make a Referral',
+        'careers' => 'Career Opportunities',
+        'other' => 'Other'
+    );
+    $subject_label = $subject_labels[$subject_type] ?? 'Contact Form';
+
+    // Build email subject
+    $email_subject = "Website Contact: {$subject_label} - {$first_name} {$last_name}";
+
+    // Build email body
+    $email_body = "
+    <html>
+    <body style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'>
+        <h2 style='color: #2e7d32;'>New Contact Form Submission</h2>
+        <table style='width: 100%; max-width: 600px; border-collapse: collapse;'>
+            <tr>
+                <td style='padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; width: 150px;'>Name:</td>
+                <td style='padding: 10px; border-bottom: 1px solid #eee;'>{$first_name} {$last_name}</td>
+            </tr>
+            <tr>
+                <td style='padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;'>Email:</td>
+                <td style='padding: 10px; border-bottom: 1px solid #eee;'><a href='mailto:{$email}'>{$email}</a></td>
+            </tr>
+            <tr>
+                <td style='padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;'>Phone:</td>
+                <td style='padding: 10px; border-bottom: 1px solid #eee;'>" . ($phone ?: 'Not provided') . "</td>
+            </tr>
+            <tr>
+                <td style='padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;'>Subject:</td>
+                <td style='padding: 10px; border-bottom: 1px solid #eee;'>{$subject_label}</td>
+            </tr>
+            <tr>
+                <td style='padding: 10px; font-weight: bold; vertical-align: top;'>Message:</td>
+                <td style='padding: 10px;'>" . nl2br(esc_html($message)) . "</td>
+            </tr>
+        </table>
+        <p style='margin-top: 20px; font-size: 12px; color: #666;'>
+            This message was sent from the WeCare website contact form.<br>
+            Submitted on: " . (new DateTime('now', new DateTimeZone('America/Chicago')))->format('F j, Y \a\t g:i a') . " CT
+        </p>
+    </body>
+    </html>
+    ";
+
+    // Send email
+    $result = wecare_send_ms_email(WECARE_MS_TO_EMAILS, $email_subject, $email_body, $email);
+
+    if ($result['success']) {
+        wp_send_json_success(array('message' => 'Thank you! Your message has been sent. We\'ll get back to you soon.'));
+    } else {
+        wp_send_json_error(array('message' => $result['message']));
+    }
+}
+add_action('wp_ajax_wecare_contact_form', 'wecare_handle_contact_form');
+add_action('wp_ajax_nopriv_wecare_contact_form', 'wecare_handle_contact_form');
+
+/**
+ * Calculate Reading Time for Posts
+ */
+function wecare_reading_time() {
+    $content = get_post_field('post_content', get_the_ID());
+    $word_count = str_word_count(strip_tags($content));
+    $reading_time = ceil($word_count / 200); // Average reading speed: 200 words per minute
+    return max(1, $reading_time); // Minimum 1 minute
+}
+
+/**
  * Theme Setup
  */
 function wecare_theme_setup() {
@@ -221,69 +438,7 @@ function wecare_open_graph_tags() {
 }
 add_action('wp_head', 'wecare_open_graph_tags', 2);
 
-// Add Local Business Schema (JSON-LD)
-function wecare_local_business_schema() {
-    if (!is_front_page() && !is_page('contact')) return;
-    ?>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "WeCare",
-        "description": "Mental health services, personal care assistance, and adult day programs in St. Cloud, Minnesota",
-        "url": "<?php echo home_url('/'); ?>",
-        "telephone": "+1-320-281-4449",
-        "email": "info@wecaremn.org",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "136 Division Street",
-            "addressLocality": "Waite Park",
-            "addressRegion": "MN",
-            "postalCode": "56387",
-            "addressCountry": "US"
-        },
-        "areaServed": [
-            {"@type": "City", "name": "St. Cloud"},
-            {"@type": "City", "name": "Waite Park"},
-            {"@type": "City", "name": "Minneapolis"},
-            {"@type": "City", "name": "St. Paul"},
-            {"@type": "County", "name": "Stearns County"},
-            {"@type": "County", "name": "Benton County"},
-            {"@type": "County", "name": "Sherburne County"},
-            {"@type": "County", "name": "Wright County"},
-            {"@type": "County", "name": "Hennepin County"},
-            {"@type": "County", "name": "Ramsey County"}
-        ],
-        "medicalSpecialty": [
-            "Mental Health",
-            "Psychiatric",
-            "Rehabilitation"
-        ],
-        "availableService": [
-            {
-                "@type": "MedicalTherapy",
-                "name": "Adult Rehabilitative Mental Health Services (ARMHS)"
-            },
-            {
-                "@type": "MedicalTherapy",
-                "name": "Outpatient Therapy"
-            },
-            {
-                "@type": "Service",
-                "name": "CFSS (Community First Services and Supports)"
-            },
-            {
-                "@type": "Service",
-                "name": "Adult Day Services"
-            }
-        ],
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "priceRange": "Accepts Medical Assistance"
-    }
-    </script>
-    <?php
-}
-add_action('wp_head', 'wecare_local_business_schema', 3);
+// Local Business Schema moved to end of file (more comprehensive version)
 
 // Add canonical URL
 function wecare_canonical_url() {
@@ -334,3 +489,164 @@ function wecare_create_required_pages() {
     }
 }
 add_action('init', 'wecare_create_required_pages');
+
+/**
+ * Local Business Schema Markup for SEO
+ */
+function wecare_local_business_schema() {
+    $schema = array(
+        '@context' => 'https://schema.org',
+        '@type' => 'MedicalBusiness',
+        '@id' => 'https://wecaremn.org/#organization',
+        'name' => 'WeCare',
+        'alternateName' => 'WeCare Minnesota',
+        'description' => 'WeCare provides compassionate mental health and personal care services in Central Minnesota and the Metro/Twin Cities area. We offer ARMHS, outpatient therapy, CFSS, adult day services, and MNsure navigation.',
+        'url' => 'https://wecaremn.org',
+        'logo' => get_template_directory_uri() . '/assets/images/wecare-logo.png',
+        'image' => get_template_directory_uri() . '/assets/images/wecare-logo.png',
+        'telephone' => '+1-320-281-4449',
+        'email' => 'info@wecaremn.org',
+        'address' => array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => '136 Division St',
+            'addressLocality' => 'Waite Park',
+            'addressRegion' => 'MN',
+            'postalCode' => '56387',
+            'addressCountry' => 'US'
+        ),
+        'geo' => array(
+            '@type' => 'GeoCoordinates',
+            'latitude' => '45.5569',
+            'longitude' => '-94.2244'
+        ),
+        'areaServed' => array(
+            array(
+                '@type' => 'State',
+                'name' => 'Minnesota'
+            ),
+            array(
+                '@type' => 'City',
+                'name' => 'St. Cloud'
+            ),
+            array(
+                '@type' => 'City',
+                'name' => 'Minneapolis'
+            ),
+            array(
+                '@type' => 'City',
+                'name' => 'St. Paul'
+            )
+        ),
+        'serviceType' => array(
+            'Mental Health Services',
+            'ARMHS (Adult Rehabilitative Mental Health Services)',
+            'Outpatient Therapy',
+            'CFSS (Community First Services and Supports)',
+            'Personal Care Assistance',
+            'Adult Day Services',
+            'MNsure Navigation'
+        ),
+        'medicalSpecialty' => array(
+            'Psychiatric',
+            'Mental Health'
+        ),
+        'priceRange' => 'Medical Assistance Accepted',
+        'paymentAccepted' => array(
+            'Medical Assistance',
+            'Medicare',
+            'Insurance'
+        ),
+        'openingHoursSpecification' => array(
+            array(
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'),
+                'opens' => '08:00',
+                'closes' => '17:00'
+            )
+        ),
+        'sameAs' => array(
+            'https://www.google.com/maps/search/WeCare+136+Division+St+Waite+Park+MN'
+        )
+    );
+
+    echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . "\n";
+}
+add_action('wp_head', 'wecare_local_business_schema');
+
+/**
+ * Service-specific Schema for Service Pages
+ */
+function wecare_service_schema() {
+    if (!is_page()) return;
+
+    $page_slug = get_post_field('post_name', get_post());
+    $services = array(
+        'behavioral-health' => array(
+            'name' => 'Adult Rehabilitative Mental Health Services (ARMHS)',
+            'description' => 'Community-based mental health rehabilitation services helping adults develop skills for independent living.',
+            'serviceType' => 'Mental Health Rehabilitation'
+        ),
+        'outpatient-therapy' => array(
+            'name' => 'Outpatient Therapy',
+            'description' => 'Professional mental health counseling including individual, couples, family, and group therapy.',
+            'serviceType' => 'Mental Health Counseling'
+        ),
+        'cfss' => array(
+            'name' => 'Community First Services and Supports (CFSS)',
+            'description' => 'In-home assistance with daily living activities for individuals with disabilities.',
+            'serviceType' => 'Personal Care Assistance'
+        ),
+        'adult-day' => array(
+            'name' => 'Adult Day Services',
+            'description' => 'Structured daytime program providing activities, meals, health monitoring, and respite for families.',
+            'serviceType' => 'Adult Day Care'
+        ),
+        'mnsure-navigation' => array(
+            'name' => 'MNsure Navigation',
+            'description' => 'Free assistance applying for health insurance coverage through MNsure.',
+            'serviceType' => 'Health Insurance Navigation'
+        )
+    );
+
+    if (isset($services[$page_slug])) {
+        $service = $services[$page_slug];
+        $schema = array(
+            '@context' => 'https://schema.org',
+            '@type' => 'MedicalService',
+            'name' => $service['name'],
+            'description' => $service['description'],
+            'serviceType' => $service['serviceType'],
+            'provider' => array(
+                '@type' => 'MedicalBusiness',
+                '@id' => 'https://wecaremn.org/#organization',
+                'name' => 'WeCare'
+            ),
+            'areaServed' => array(
+                '@type' => 'State',
+                'name' => 'Minnesota'
+            ),
+            'availableChannel' => array(
+                '@type' => 'ServiceChannel',
+                'serviceLocation' => array(
+                    '@type' => 'Place',
+                    'name' => 'WeCare',
+                    'address' => array(
+                        '@type' => 'PostalAddress',
+                        'streetAddress' => '136 Division St',
+                        'addressLocality' => 'Waite Park',
+                        'addressRegion' => 'MN',
+                        'postalCode' => '56387'
+                    )
+                ),
+                'servicePhone' => array(
+                    '@type' => 'ContactPoint',
+                    'telephone' => '+1-320-281-4449',
+                    'contactType' => 'customer service'
+                )
+            )
+        );
+
+        echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . "\n";
+    }
+}
+add_action('wp_head', 'wecare_service_schema');

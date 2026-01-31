@@ -29,7 +29,7 @@ get_header();
                 </div>
             </div>
             <div class="mnsure-intro-image">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/MNSure Navigation - Home, Our Services & Referrals Page.webp" alt="MNSure Navigation Services">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/MNSure Navigation - Home, Our Services & Referrals Page.webp" alt="WeCare MNsure Navigator helping Minnesota residents enroll in health insurance">
             </div>
         </div>
     </div>

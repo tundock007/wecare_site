@@ -22,7 +22,7 @@ get_header();
         <div class="service-detail">
             <div class="service-row">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="Personal Care Assistance">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="WeCare PCA personal care assistance helping with daily living activities in Minnesota">
                 </div>
                 <div class="service-content">
                     <h2 class="service-heading">Personal Care Assistance (PCA)</h2>

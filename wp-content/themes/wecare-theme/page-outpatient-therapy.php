@@ -19,14 +19,19 @@ get_header();
     <!-- Service Overview -->
     <section class="therapy-overview section-padding">
         <div class="container">
-            <div class="overview-content-full">
-                <h2>Our Therapy Services</h2>
-                <div class="service-areas-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <span><strong>Service Areas:</strong> Central Minnesota (St. Cloud area), Metro/Twin Cities, and surrounding communities</span>
+            <div class="service-row">
+                <div class="service-image">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Outpatient Therapy - Home, Our Services & Referrals Page.webp" alt="WeCare outpatient therapy and mental health counseling services in Minnesota">
                 </div>
-                <p>WeCare provides comprehensive psychotherapy services delivered by experienced mental health counselors and practitioners. We create a supportive environment for clients to express emotions and address mental health challenges.</p>
-                <p>Our clinicians support individuals, couples, families, and groups through challenges such as anxiety, depression, trauma, relationship stress, and life transitions.</p>
+                <div class="service-content">
+                    <h2>Our Therapy Services</h2>
+                    <div class="service-areas-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span><strong>Service Areas:</strong> Central Minnesota (St. Cloud area), Metro/Twin Cities, and surrounding communities</span>
+                    </div>
+                    <p>WeCare provides comprehensive psychotherapy services delivered by experienced mental health counselors and practitioners. We create a supportive environment for clients to express emotions and address mental health challenges.</p>
+                    <p>Our clinicians support individuals, couples, families, and groups through challenges such as anxiety, depression, trauma, relationship stress, and life transitions.</p>
+                </div>
             </div>
         </div>
     </section>

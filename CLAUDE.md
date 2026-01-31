@@ -48,8 +48,14 @@ Font sizes are controlled via CSS custom properties in `style.css` (lines 50-55)
 
 ## Deployment
 
-Deploy theme files to WordPress.com via SSH/rsync:
+Deploy theme files to WordPress.com via rsync (always use this method):
 
 ```bash
-rsync -avz -e "ssh -i ~/.ssh/id_ed25519" /Users/Ola/wecare-theme/wp-content/themes/wecare-theme/ wecaremn.wordpress.com@sftp.wp.com:htdocs/wp-content/themes/wecare-theme/
+rsync -avz -e "ssh -i ~/.ssh/id_ed25519" /Users/Ola/wecare-theme/wp-content/themes/wecare-theme/ wecaremn.wordpress.com@ssh.wp.com:htdocs/wp-content/themes/wecare-theme/
 ```
+
+**Connection details:**
+- SSH host: `ssh.wp.com`
+- SFTP host: `sftp.wp.com`
+- Username: `wecaremn.wordpress.com`
+- SSH key: `~/.ssh/id_ed25519`

@@ -29,7 +29,7 @@ get_header();
                 <!-- Stearns County -->
                 <div class="resource-card">
                     <div class="resource-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Stearns - Community Resources.webp" alt="Stearns County">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Stearns - Community Resources.webp" alt="Mental health and community resources in Stearns County Minnesota">
                     </div>
                     <h3>Stearns County</h3>
                     <div class="resource-details">
@@ -44,7 +44,7 @@ get_header();
                 <!-- Sherburne County -->
                 <div class="resource-card">
                     <div class="resource-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Sherburne - Community Resources.webp" alt="Sherburne County">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Sherburne - Community Resources.webp" alt="Mental health and community resources in Sherburne County Minnesota">
                     </div>
                     <h3>Sherburne County</h3>
                     <div class="resource-details">
@@ -59,7 +59,7 @@ get_header();
                 <!-- Benton County -->
                 <div class="resource-card">
                     <div class="resource-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Benton - Community Resources.webp" alt="Benton County">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Benton - Community Resources.webp" alt="Mental health and community resources in Benton County Minnesota">
                     </div>
                     <h3>Benton County</h3>
                     <div class="resource-details">
@@ -74,7 +74,7 @@ get_header();
                 <!-- Wright County -->
                 <div class="resource-card">
                     <div class="resource-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Wright - Community Resources.webp" alt="Wright County">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Wright - Community Resources.webp" alt="Mental health and community resources in Wright County Minnesota">
                     </div>
                     <h3>Wright County</h3>
                     <div class="resource-details">

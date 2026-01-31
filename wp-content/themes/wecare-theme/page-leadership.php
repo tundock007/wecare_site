@@ -27,7 +27,7 @@ get_header();
                 <!-- Ola - CEO -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Ola">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Ola - Chief Executive Officer at WeCare Minnesota">
                     </div>
                     <div class="member-info">
                         <h3>Ola</h3>
@@ -38,7 +38,7 @@ get_header();
                 <!-- Anna Stefanelli -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Anna - Leadership Page.webp" alt="Anna Stefanelli">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Anna - Leadership Page.webp" alt="Anna Stefanelli - Quality Assurance Manager at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Anna Stefanelli</h3>
@@ -49,7 +49,7 @@ get_header();
                 <!-- Deb Hesli -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Deb Hesli">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Deb Hesli - Clinical Supervisor at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Deb Hesli</h3>
@@ -60,7 +60,7 @@ get_header();
                 <!-- Naima Hussein -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Naima - Leadership Page.webp" alt="Naima Hussein">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Naima - Leadership Page.webp" alt="Naima Hussein - Clinical Trainee at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Naima Hussein</h3>
@@ -71,7 +71,7 @@ get_header();
                 <!-- Kathy Mandery -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Kathy - Leadership Page.webp" alt="Kathy Mandery">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Kathy - Leadership Page.webp" alt="Kathy Mandery - Human Resource Manager at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Kathy Mandery</h3>
@@ -82,7 +82,7 @@ get_header();
                 <!-- Lynn Karst -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Lynn Karst">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Lynn Karst - Outreach Engagement Specialist at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Lynn Karst</h3>
@@ -93,7 +93,7 @@ get_header();
                 <!-- Amanda Sand -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Amanda Sand">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Amanda Sand - ARMHS Supervisor Central Minnesota at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Amanda Sand</h3>
@@ -104,7 +104,7 @@ get_header();
                 <!-- Donnyel Panek -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Donnyel Panek">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Donnyel Panek - ARMHS Supervisor Metro Minnesota at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Donnyel Panek</h3>
@@ -115,7 +115,7 @@ get_header();
                 <!-- Hamdi Ahmed -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Hamdi Ahmed">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Hamdi Ahmed - Adult Day Services Program Coordinator at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Hamdi Ahmed</h3>

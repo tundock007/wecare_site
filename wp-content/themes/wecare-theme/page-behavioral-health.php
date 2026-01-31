@@ -22,7 +22,7 @@ get_header();
         <div class="service-detail">
             <div class="service-row">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="Behavioral Health Services">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="WeCare ARMHS Adult Rehabilitative Mental Health Services helping adults in Minnesota">
                 </div>
                 <div class="service-content">
                     <h2 class="service-heading">Behavioral Health Services</h2>

@@ -36,7 +36,7 @@ get_header();
         <div class="services-images-grid">
             <a href="<?php echo esc_url(home_url('/behavioral-health')); ?>" class="service-image-card">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="Mental Health Services">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ARMHS - Home, Our Services & Referrals Page.webp" alt="WeCare ARMHS mental health rehabilitation services for adults in Minnesota">
                 </div>
                 <div class="service-image-content">
                     <h3>Mental Health Services</h3>
@@ -47,7 +47,7 @@ get_header();
 
             <a href="<?php echo esc_url(home_url('/cfss')); ?>" class="service-image-card">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="CFSS Personal Care">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/CFSS - Home, Our Services & Referrals Page.webp" alt="WeCare CFSS personal care assistance helping with daily living in Central Minnesota">
                 </div>
                 <div class="service-image-content">
                     <h3>CFSS / Personal Care</h3>
@@ -58,7 +58,7 @@ get_header();
 
             <a href="<?php echo esc_url(home_url('/adult-day')); ?>" class="service-image-card">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="Adult Day Services">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="WeCare Adult Day Services program with activities and meals in St. Cloud Minnesota">
                 </div>
                 <div class="service-image-content">
                     <h3>Adult Day Services</h3>
@@ -69,7 +69,7 @@ get_header();
 
             <a href="<?php echo esc_url(home_url('/mnsure-navigation')); ?>" class="service-image-card">
                 <div class="service-image">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/MNSure Navigation - Home, Our Services & Referrals Page.webp" alt="MNSure Navigation">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/MNSure Navigation - Home, Our Services & Referrals Page.webp" alt="WeCare MNsure Navigator providing free health insurance enrollment help in Minnesota">
                 </div>
                 <div class="service-image-content">
                     <h3>MNsure Navigation</h3>
@@ -128,7 +128,7 @@ get_header();
                 <a href="<?php echo esc_url(home_url('/about')); ?>" class="btn btn-primary">Learn About Us</a>
             </div>
             <div class="why-wecare-image">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/WeCare Brochure - Home Page.webp" alt="WeCare Team">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/WeCare Brochure - Home Page.webp" alt="WeCare team providing compassionate mental health and personal care services">
             </div>
         </div>
     </div>

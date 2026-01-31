@@ -23,7 +23,7 @@ get_header();
                 <!-- Inclusive Community -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="Adult Day Services">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/ADS - Home, Our Services & Referrals Page.webp" alt="WeCare Adult Day Services providing structured activities and care in St. Cloud">
                     </div>
                     <div class="service-content">
                         <h3>Inclusive Community</h3>
@@ -34,7 +34,7 @@ get_header();
                 <!-- Physical Therapy -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-gym.webp" alt="Physical Therapy Gym">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-gym.webp" alt="Exercise and physical activity room at WeCare Adult Day Services">
                     </div>
                     <div class="service-content">
                         <h3>Fitness & Physical Therapy</h3>
@@ -45,7 +45,7 @@ get_header();
                 <!-- Meal Service -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Meal Service.webp" alt="Meal Service">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Meal Service.webp" alt="Nutritious meals and snacks served at WeCare Adult Day Services St. Cloud">
                     </div>
                     <div class="service-content">
                         <h3>Nutritious Meals</h3>
@@ -56,7 +56,7 @@ get_header();
                 <!-- Transportation -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-dining.webp" alt="Transportation Service">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-dining.webp" alt="Community dining area at WeCare Adult Day Services facility">
                     </div>
                     <div class="service-content">
                         <h3>Transportation</h3>
@@ -67,7 +67,7 @@ get_header();
                 <!-- Health Management -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-health.webp" alt="Health Management">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-health.webp" alt="Health monitoring and medication management at WeCare Adult Day Services">
                     </div>
                     <div class="service-content">
                         <h3>Health Monitoring</h3>
@@ -78,7 +78,7 @@ get_header();
                 <!-- Social Programs -->
                 <div class="service-card-img">
                     <div class="service-image">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-community.webp" alt="Social Programs">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ads-community.webp" alt="Social activities and community programs at WeCare Adult Day Services">
                     </div>
                     <div class="service-content">
                         <h3>Social Programs</h3>

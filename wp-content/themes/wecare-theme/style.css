@@ -111,7 +111,7 @@ img {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 /* ==========================================================================
@@ -654,7 +654,7 @@ body.mobile-menu-open {
     font-size: var(--font-size-section);
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     text-transform: none;
     letter-spacing: -0.02em;
     position: relative;
@@ -2106,7 +2106,7 @@ body.mobile-menu-open {
 
 /* Section Padding */
 .section-padding {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .section-padding-sm {
@@ -2138,7 +2138,7 @@ body.mobile-menu-open {
 /* Section Titles */
 .section-title {
     color: var(--primary-green);
-    font-size: 2.25rem;
+    font-size: var(--font-size-section);
     margin-bottom: 1rem;
 }
 
@@ -2302,10 +2302,6 @@ body.mobile-menu-open {
 
     .page-hero .page-title {
         font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 1.75rem;
     }
 
     .cta-buttons {

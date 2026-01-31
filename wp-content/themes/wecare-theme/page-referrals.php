@@ -34,7 +34,7 @@ get_header();
 }
 
 .referral-form-container .form-header h1 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 4px;
     color: #111827;
@@ -63,7 +63,7 @@ get_header();
 }
 
 .referral-form-container .section-title {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 10px;
@@ -128,7 +128,7 @@ get_header();
 }
 
 .referral-form-container label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: #374151;
     margin-bottom: 4px;
@@ -149,7 +149,7 @@ get_header();
     padding: 8px 10px !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     line-height: 1.4 !important;
     height: auto !important;
     min-height: 36px !important;
