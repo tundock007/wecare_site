@@ -38,16 +38,6 @@ get_header();
                 </div>
 
                 <div class="legal-section">
-                    <h3>Language Assistance Services</h3>
-                    <p>WeCare provides free language services to people whose primary language is not English, such as:</p>
-                    <ul>
-                        <li>Qualified interpreters</li>
-                        <li>Information written in other languages</li>
-                    </ul>
-                    <p>If you need these services, please contact us at <a href="tel:3202814449">(320) 281-4449</a>.</p>
-                </div>
-
-                <div class="legal-section">
                     <h3>Filing a Complaint</h3>
                     <p>If you believe that WeCare has failed to provide these services or discriminated in another way on the basis of race, color, national origin, age, disability, sex, sexual orientation, gender identity, or any other protected class, you can file a grievance with:</p>
 

@@ -24,14 +24,14 @@ get_header();
             </div>
 
             <div class="team-grid">
-                <!-- Ola - CEO -->
+                <!-- Ola -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Ola - Chief Executive Officer at WeCare Minnesota">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Ola - Tech Support/IT at WeCare Minnesota">
                     </div>
                     <div class="member-info">
                         <h3>Ola</h3>
-                        <p class="member-title">Chief Executive Officer</p>
+                        <p class="member-title">Tech Support/IT</p>
                     </div>
                 </div>
 
@@ -82,11 +82,11 @@ get_header();
                 <!-- Lynn Karst -->
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Lynn Karst - Outreach Engagement Specialist at WeCare">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Website Photos/Coming Soon - Leadership Page.webp" alt="Lynn Karst - Executive Assistant and Outreach Engagement Specialist at WeCare">
                     </div>
                     <div class="member-info">
                         <h3>Lynn Karst</h3>
-                        <p class="member-title">Outreach/Engagement Specialist</p>
+                        <p class="member-title">Executive Assistant & Outreach/Engagement Specialist</p>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ get_header();
                     </div>
                     <div class="member-info">
                         <h3>Donnyel Panek</h3>
-                        <p class="member-title">ARMHS Supervisor - Metro MN</p>
+                        <p class="member-title">ARMHS Supervisor - Twin Cities Metro</p>
                     </div>
                 </div>
 

@@ -3,6 +3,38 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <?php
+    // Open Graph Meta Tags for Social Sharing
+    $og_title = is_front_page() ? get_bloginfo('name') . ' - Mental Health & Personal Care Services' : get_the_title() . ' | ' . get_bloginfo('name');
+    $og_description = is_front_page()
+        ? 'WeCare Minnesota provides compassionate mental health services, personal care assistance, and community support programs throughout Minnesota.'
+        : (has_excerpt() ? get_the_excerpt() : 'WeCare Minnesota provides compassionate mental health services, personal care assistance, and community support programs.');
+    $og_url = is_front_page() ? home_url('/') : get_permalink();
+    // Default social sharing image - WeCare Brochure
+    $og_image = get_template_directory_uri() . '/assets/Website Photos/WeCare Brochure - Home Page.webp';
+
+    // Use featured image if available on single posts/pages
+    if (is_singular() && has_post_thumbnail()) {
+        $og_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+    }
+    ?>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo esc_url($og_url); ?>">
+    <meta property="og:title" content="<?php echo esc_attr($og_title); ?>">
+    <meta property="og:description" content="<?php echo esc_attr($og_description); ?>">
+    <meta property="og:image" content="<?php echo esc_url($og_image); ?>">
+    <meta property="og:site_name" content="WeCare Minnesota">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?php echo esc_url($og_url); ?>">
+    <meta name="twitter:title" content="<?php echo esc_attr($og_title); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr($og_description); ?>">
+    <meta name="twitter:image" content="<?php echo esc_url($og_image); ?>">
+
     <?php wp_head(); ?>
 </head>
 
@@ -50,7 +82,7 @@
             <!-- Header Actions -->
             <div class="header-actions">
                 <div class="header-buttons">
-                    <a href="#" class="staff-access">Staff Access</a>
+                    <a href="<?php echo esc_url(home_url('/staff-access')); ?>" class="staff-access">Staff Access</a>
                     <a href="https://app.procentive.com/clientportal2/" class="client-login">Client Login</a>
                 </div>
                 <div class="header-info">

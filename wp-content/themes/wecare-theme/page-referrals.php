@@ -216,6 +216,30 @@ get_header();
     gap: 5px;
 }
 
+.referral-form-container .region-options {
+    margin-top: 8px;
+}
+
+.referral-form-container .region-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.referral-form-container .region-option input[type="radio"] {
+    margin: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.referral-form-container .region-option label {
+    display: inline !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+}
+
 .referral-form-container .radio-item input[type="radio"] {
     width: 18px;
     height: 18px;
@@ -1208,19 +1232,10 @@ get_header();
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Preferred Service Region <span class="required">*</span></label>
-                                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="radio" name="region" value="Twin Cities Metro" style="cursor: pointer;">
-                                        <span>Twin Cities Metro</span>
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="radio" name="region" value="Saint Cloud Area" style="cursor: pointer;">
-                                        <span>Saint Cloud Area</span>
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="radio" name="region" value="Winona Area" style="cursor: pointer;">
-                                        <span>Winona Area</span>
-                                    </label>
+                                <div class="region-options">
+                                    <div class="region-option"><input type="radio" name="region" value="Twin Cities Metro" id="region_metro"> <label for="region_metro">Twin Cities Metro</label></div>
+                                    <div class="region-option"><input type="radio" name="region" value="Saint Cloud Area" id="region_stcloud"> <label for="region_stcloud">Saint Cloud Area</label></div>
+                                    <div class="region-option"><input type="radio" name="region" value="Winona Area" id="region_winona"> <label for="region_winona">Winona Area</label></div>
                                 </div>
                             </div>
                         </div>
